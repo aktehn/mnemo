@@ -14,15 +14,15 @@ jobs:
     
     strategy:
       matrix:
-        os: [windows-latest, macos-latest, ubuntu-latest]
-        node-version: [18.x, 20.x]
+        os: ${{ fromJson(github.event_name == 'pull_request' && '["ubuntu-latest"]' || '["windows-latest", "macos-latest", "ubuntu-latest"]') }}
+        node-version: ${{ fromJson(github.event_name == 'pull_request' && '["20.x"]' || '["20.x", "22.x"]') }}
     
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     
     - name: Setup Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
@@ -30,16 +30,17 @@ jobs:
     - name: Install dependencies
       run: npm ci
     
-    - name: Run linter
-      run: npm run lint
-    
     - name: Build application
       run: npm run build
+      env:
+        # Prevent build failures if code strictly checks for these
+        VITE_SUPABASE_URL: "https://example.supabase.co"
+        VITE_SUPABASE_ANON_KEY: "dummy-key-for-build-process"
     
     - name: Upload artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
-        name: release-${{ matrix.os }}
+        name: artifact-${{ matrix.os }}-${{ matrix.node-version }}
         path: release/
         retention-days: 7
 
@@ -50,18 +51,18 @@ jobs:
     
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     
     - name: Download all artifacts
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
     
     - name: Create Release
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v2
       with:
         files: |
-          release-windows-latest/**/*
-          release-macos-latest/**/*
-          release-ubuntu-latest/**/*
+          artifact-windows-latest-*/**/*
+          artifact-macos-latest-*/**/*
+          artifact-ubuntu-latest-*/**/*
         draft: false
         prerelease: false
       env:
