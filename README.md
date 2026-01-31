@@ -45,7 +45,7 @@ Follow these steps to get Mnemo running locally.
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/mnemo.git
+   git clone https://github.com/AykutDag/mnemo.git
    cd mnemo
    ```
 
@@ -84,4 +84,4 @@ Please read our [Contribution Guide](CONTRIBUTING.md) to get started.
 
 ## License
 
-MIT © [Your Name/Organization]
+MIT © Aykut Dağ
