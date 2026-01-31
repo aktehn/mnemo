@@ -40,7 +40,9 @@ Code that is truly generic or shared across multiple features goes into the root
     *   Add **JSDoc** comments to complex functions and logic.
     *   Follow the **Feature-Based Architecture** strictly.
 4.  **Commit**: Write clear, descriptive commit messages.
-5.  **Pull Request**: Push your branch and open a PR. Describe your changes and link any relevant issues.
+5.  **Pull Request**: Push your branch and open a PR.
+    *   **CI Checks**: Your PR must pass all automated CI checks (Build, Lint). Broken builds are automatically blocked.
+    *   **Protection**: Direct pushes to `main` are disabled. All changes must be merged via PR.
 
 ## Security
 
