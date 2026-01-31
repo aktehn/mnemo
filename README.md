@@ -24,6 +24,9 @@ Capture new words instantly. Mnemo integrates dictionary lookups to automaticall
 ### 🔄 Hybrid Data Sync
 Seamlessly switches between offline local storage and cloud synchronization with Supabase. Your progress is safe, whether you're online or off the grid.
 
+### 🚀 Optimized CI/CD
+Fully automated pipeline using GitHub Actions v4. Smart matrix strategy runs minimal checks for PRs (Ubuntu/Node 20) while performing comprehensive multi-OS builds for Release tags.
+
 ## Tech Stack
 
 - **Core**: Electron, React, TypeScript
