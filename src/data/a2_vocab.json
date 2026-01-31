@@ -1,0 +1,2884 @@
+[
+  {
+    "id": 1,
+    "term": "ability",
+    "meaning": "yetenek",
+    "example": "He has the ability to learn quickly.",
+    "type": "noun",
+    "level": "A2"
+  },
+  {
+    "id": 2,
+    "term": "able",
+    "meaning": "yapabilen, muktedir",
+    "example": "I am able to swim.",
+    "type": "adjective",
+    "level": "A2"
+  },
+  {
+    "id": 1001,
+    "term": "abandon",
+    "meaning": "terk etmek",
+    "example": "They had to abandon their car.",
+    "type": "verb",
+    "level": "B1"
+  },
+  {
+    "id": 1002,
+    "term": "absolute",
+    "meaning": "mutlak, kesin",
+    "example": "I have absolute confidence in her.",
+    "type": "adjective",
+    "level": "B1",
+    "status": "easy",
+    "reviewDate": 1768897328477
+  },
+  {
+    "id": 1003,
+    "term": "academic",
+    "meaning": "akademik",
+    "example": "She has strong academic qualifications.",
+    "type": "adjective",
+    "level": "B1",
+    "status": "easy",
+    "reviewDate": 1768990532968
+  },
+  {
+    "id": 1004,
+    "term": "acceptable",
+    "meaning": "kabul edilebilir",
+    "example": "This behavior is not acceptable.",
+    "type": "adjective",
+    "level": "B1"
+  },
+  {
+    "id": 1005,
+    "term": "accompany",
+    "meaning": "eşlik etmek",
+    "example": "May I accompany you?",
+    "type": "verb",
+    "level": "B1",
+    "status": "hard",
+    "reviewDate": 1768920356161
+  },
+  {
+    "id": 1006,
+    "term": "account",
+    "meaning": "hesap",
+    "example": "I opened a bank account.",
+    "type": "noun",
+    "level": "B1",
+    "status": "easy",
+    "reviewDate": 1768920351193
+  },
+  {
+    "id": 1007,
+    "term": "accurate",
+    "meaning": "doğru, kesin",
+    "example": "The description was accurate.",
+    "type": "adjective",
+    "level": "B1",
+    "status": "hard",
+    "reviewDate": 1768920251137
+  },
+  {
+    "id": 1008,
+    "term": "accuse",
+    "meaning": "suçlamak",
+    "example": "He was accused of theft.",
+    "type": "verb",
+    "level": "B1"
+  },
+  {
+    "id": 1009,
+    "term": "achieve",
+    "meaning": "elde etmek, başarmak",
+    "example": "They achieved their goal.",
+    "type": "verb",
+    "level": "B1",
+    "status": "hard",
+    "reviewDate": 1768897312349
+  },
+  {
+    "id": 1010,
+    "term": "achievement",
+    "meaning": "başarı",
+    "example": "Winning the prize was a great achievement.",
+    "type": "noun",
+    "level": "B1",
+    "status": "hard",
+    "reviewDate": 1768920352665
+  },
+  {
+    "id": 1011,
+    "term": "acknowledge",
+    "meaning": "kabul etmek (doğruluğunu), tanımak",
+    "example": "He acknowledged his mistake.",
+    "type": "verb",
+    "level": "B1",
+    "status": "hard",
+    "reviewDate": 1768895705603
+  },
+  {
+    "id": 1012,
+    "term": "acquire",
+    "meaning": "edinmek",
+    "example": "He managed to acquire some shares.",
+    "type": "verb",
+    "level": "B1"
+  },
+  {
+    "id": 1013,
+    "term": "action",
+    "meaning": "eylem",
+    "example": "We need to take action immediately.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1014,
+    "term": "active",
+    "meaning": "etkin",
+    "example": "He remains active despite his age.",
+    "type": "adjective",
+    "level": "B1"
+  },
+  {
+    "id": 1015,
+    "term": "activist",
+    "meaning": "eylemci",
+    "example": "She is a human rights activist.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1016,
+    "term": "activity",
+    "meaning": "etkinlik",
+    "example": "Outdoor activities are fun.",
+    "type": "noun",
+    "level": "B1",
+    "status": "easy",
+    "reviewDate": 1768920359937
+  },
+  {
+    "id": 1017,
+    "term": "actor",
+    "meaning": "erkek oyuncu",
+    "example": "He is a famous actor.",
+    "type": "noun",
+    "level": "B1",
+    "status": "hard",
+    "reviewDate": 1768920347160
+  },
+  {
+    "id": 1018,
+    "term": "actress",
+    "meaning": "kadın oyuncu",
+    "example": "She is a talented actress.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1019,
+    "term": "actual",
+    "meaning": "gerçek (aktüel)",
+    "example": "The actual cost was higher.",
+    "type": "adjective",
+    "level": "B1"
+  },
+  {
+    "id": 1020,
+    "term": "adapt",
+    "meaning": "uyum sağlamak",
+    "example": "We must adapt to change.",
+    "type": "verb",
+    "level": "B1",
+    "status": "hard",
+    "reviewDate": 1768920357385
+  },
+  {
+    "id": 1021,
+    "term": "agree",
+    "meaning": "katılmak (bir fikre)",
+    "example": "I agree with you completely.",
+    "type": "verb",
+    "level": "A2"
+  },
+  {
+    "id": 1022,
+    "term": "allow",
+    "meaning": "izin vermek",
+    "example": "They do not allow smoking here.",
+    "type": "verb",
+    "level": "A2",
+    "status": "easy",
+    "reviewDate": 1768990525991
+  },
+  {
+    "id": 1023,
+    "term": "believe",
+    "meaning": "inanmak",
+    "example": "I believe in miracles.",
+    "type": "verb",
+    "level": "A2",
+    "status": "easy",
+    "reviewDate": 1768990530879
+  },
+  {
+    "id": 1024,
+    "term": "choose",
+    "meaning": "seçmek",
+    "example": "You must choose one.",
+    "type": "verb",
+    "level": "A2"
+  },
+  {
+    "id": 1025,
+    "term": "continue",
+    "meaning": "devam etmek",
+    "example": "Please continue your story.",
+    "type": "verb",
+    "level": "A2"
+  },
+  {
+    "id": 1026,
+    "term": "describe",
+    "meaning": "betimlemek, tarif etmek",
+    "example": "Can you describe the thief?",
+    "type": "verb",
+    "level": "A2"
+  },
+  {
+    "id": 1027,
+    "term": "explain",
+    "meaning": "açıklamak",
+    "example": "Can you explain this rule?",
+    "type": "verb",
+    "level": "A2"
+  },
+  {
+    "id": 1028,
+    "term": "forget",
+    "meaning": "unutmak",
+    "example": "Don't forget to call me.",
+    "type": "verb",
+    "level": "A2"
+  },
+  {
+    "id": 1029,
+    "term": "hope",
+    "meaning": "ummak",
+    "example": "I hope you are well.",
+    "type": "verb",
+    "level": "A2"
+  },
+  {
+    "id": 1030,
+    "term": "join",
+    "meaning": "katılmak",
+    "example": "Would you like to join us?",
+    "type": "verb",
+    "level": "A2"
+  },
+  {
+    "id": 1031,
+    "term": "laugh",
+    "meaning": "gülmek",
+    "example": "She laughed at his joke.",
+    "type": "verb",
+    "level": "A2"
+  },
+  {
+    "id": 1032,
+    "term": "offer",
+    "meaning": "teklif etmek",
+    "example": "They offered me a job.",
+    "type": "verb",
+    "level": "A2"
+  },
+  {
+    "id": 1033,
+    "term": "prefer",
+    "meaning": "tercih etmek",
+    "example": "I prefer tea to coffee.",
+    "type": "verb",
+    "level": "A2"
+  },
+  {
+    "id": 1034,
+    "term": "receive",
+    "meaning": "almak, teslim almak",
+    "example": "Did you receive my email?",
+    "type": "verb",
+    "level": "A2"
+  },
+  {
+    "id": 1035,
+    "term": "seem",
+    "meaning": "görünmek",
+    "example": "You seem happy today.",
+    "type": "verb",
+    "level": "A2"
+  },
+  {
+    "id": 1036,
+    "term": "suggest",
+    "meaning": "önermek",
+    "example": "I suggest we go early.",
+    "type": "verb",
+    "level": "B1"
+  },
+  {
+    "id": 1037,
+    "term": "amazing",
+    "meaning": "şaşırtıcı, harika",
+    "example": "The view was amazing.",
+    "type": "adjective",
+    "level": "A2"
+  },
+  {
+    "id": 1038,
+    "term": "bored",
+    "meaning": "sıkılmış",
+    "example": "I am bored with this movie.",
+    "type": "adjective",
+    "level": "A2"
+  },
+  {
+    "id": 1039,
+    "term": "careful",
+    "meaning": "dikkatli",
+    "example": "Be careful with that glass!",
+    "type": "adjective",
+    "level": "A2"
+  },
+  {
+    "id": 1040,
+    "term": "dangerous",
+    "meaning": "tehlikeli",
+    "example": "It is dangerous to swim here.",
+    "type": "adjective",
+    "level": "A2"
+  },
+  {
+    "id": 1041,
+    "term": "empty",
+    "meaning": "boş",
+    "example": "The box is empty.",
+    "type": "adjective",
+    "level": "A2"
+  },
+  {
+    "id": 1042,
+    "term": "famous",
+    "meaning": "ünlü",
+    "example": "He is a famous actor.",
+    "type": "adjective",
+    "level": "A2"
+  },
+  {
+    "id": 1043,
+    "term": "healthy",
+    "meaning": "sağlıklı",
+    "example": "Eating fruit is healthy.",
+    "type": "adjective",
+    "level": "A2"
+  },
+  {
+    "id": 1044,
+    "term": "lucky",
+    "meaning": "şanslı",
+    "example": "You are very lucky!",
+    "type": "adjective",
+    "level": "A2"
+  },
+  {
+    "id": 1045,
+    "term": "modern",
+    "meaning": "modern",
+    "example": "They live in a modern house.",
+    "type": "adjective",
+    "level": "A2"
+  },
+  {
+    "id": 1046,
+    "term": "noisy",
+    "meaning": "gürültülü",
+    "example": "The street is very noisy.",
+    "type": "adjective",
+    "level": "A2"
+  },
+  {
+    "id": 1047,
+    "term": "polite",
+    "meaning": "kibar",
+    "example": "He is always polite to everyone.",
+    "type": "adjective",
+    "level": "A2"
+  },
+  {
+    "id": 1048,
+    "term": "serious",
+    "meaning": "ciddi",
+    "example": "This is a serious problem.",
+    "type": "adjective",
+    "level": "A2"
+  },
+  {
+    "id": 1049,
+    "term": "traditional",
+    "meaning": "geleneksel",
+    "example": "She wore traditional clothes.",
+    "type": "adjective",
+    "level": "A2"
+  },
+  {
+    "id": 1050,
+    "term": "unusual",
+    "meaning": "olağandışı",
+    "example": "It is unusual for him to be late.",
+    "type": "adjective",
+    "level": "A2"
+  },
+  {
+    "id": 1051,
+    "term": "adventure",
+    "meaning": "macera",
+    "example": "We went on a big adventure.",
+    "type": "noun",
+    "level": "A2"
+  },
+  {
+    "id": 1052,
+    "term": "bill",
+    "meaning": "fatura, hesap",
+    "example": "Can I have the bill, please?",
+    "type": "noun",
+    "level": "A2"
+  },
+  {
+    "id": 1053,
+    "term": "cycle",
+    "meaning": "bisiklet sürmek",
+    "example": "I cycle to work every day.",
+    "type": "verb",
+    "level": "A2"
+  },
+  {
+    "id": 1054,
+    "term": "degree",
+    "meaning": "derece",
+    "example": "The temperature is 20 degrees.",
+    "type": "noun",
+    "level": "A2"
+  },
+  {
+    "id": 1055,
+    "term": "energy",
+    "meaning": "enerji",
+    "example": "I don't have enough energy.",
+    "type": "noun",
+    "level": "A2"
+  },
+  {
+    "id": 1056,
+    "term": "festival",
+    "meaning": "festival",
+    "example": "The music festival was great.",
+    "type": "noun",
+    "level": "A2",
+    "status": "easy",
+    "reviewDate": "2026-01-26T17:04:54.144Z",
+    "interval": 1,
+    "repetition": 1,
+    "ef": 2.6
+  },
+  {
+    "id": 1057,
+    "term": "government",
+    "meaning": "hükümet",
+    "example": "The government lowered taxes.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1058,
+    "term": "health",
+    "meaning": "sağlık",
+    "example": "Health is very important.",
+    "type": "noun",
+    "level": "A2"
+  },
+  {
+    "id": 1059,
+    "term": "island",
+    "meaning": "ada",
+    "example": "They live on a small island.",
+    "type": "noun",
+    "level": "A2"
+  },
+  {
+    "id": 1060,
+    "term": "journey",
+    "meaning": "yolculuk",
+    "example": "It was a long journey.",
+    "type": "noun",
+    "level": "A2"
+  },
+  {
+    "id": 1061,
+    "term": "memory",
+    "meaning": "hafıza, anı",
+    "example": "I have good memories of that place.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1062,
+    "term": "nature",
+    "meaning": "doğa",
+    "example": "She loves nature.",
+    "type": "noun",
+    "level": "A2"
+  },
+  {
+    "id": 1063,
+    "term": "opinion",
+    "meaning": "fikir, görüş, düşünce",
+    "example": "What is your opinion?",
+    "type": "noun",
+    "level": "A2"
+  },
+  {
+    "id": 1064,
+    "term": "prize",
+    "meaning": "ödül",
+    "example": "She won the first prize.",
+    "type": "noun",
+    "level": "A2"
+  },
+  {
+    "id": 1065,
+    "term": "actually",
+    "meaning": "aslında",
+    "example": "Actually, I don't know him.",
+    "type": "adverb",
+    "level": "A2"
+  },
+  {
+    "id": 1066,
+    "term": "already",
+    "meaning": "çoktan, zaten",
+    "example": "I have already finished.",
+    "type": "adverb",
+    "level": "A2"
+  },
+  {
+    "id": 1067,
+    "term": "clearly",
+    "meaning": "açıkça, apaçık, şüphesiz",
+    "example": "Speak clearly, please.",
+    "type": "adverb",
+    "level": "A2"
+  },
+  {
+    "id": 1068,
+    "term": "easily",
+    "meaning": "kolayca",
+    "example": "He won the game easily.",
+    "type": "adverb",
+    "level": "A2"
+  },
+  {
+    "id": 1069,
+    "term": "everywhere",
+    "meaning": "her yerde",
+    "example": "I looked everywhere for my keys.",
+    "type": "adverb",
+    "level": "A2"
+  },
+  {
+    "id": 1070,
+    "term": "finally",
+    "meaning": "sonunda",
+    "example": "Finally, we arrived home.",
+    "type": "adverb",
+    "level": "A2"
+  },
+  {
+    "id": 1071,
+    "term": "luckily",
+    "meaning": "şans eseri, neyse ki",
+    "example": "Luckily, no one was hurt.",
+    "type": "adverb",
+    "level": "B1"
+  },
+  {
+    "id": 1072,
+    "term": "perhaps",
+    "meaning": "belki",
+    "example": "Perhaps it will rain later.",
+    "type": "adverb",
+    "level": "A2"
+  },
+  {
+    "id": 1073,
+    "term": "quite",
+    "meaning": "oldukça",
+    "example": "It is quite cold today.",
+    "type": "adverb",
+    "level": "A2",
+    "status": "hard",
+    "reviewDate": 1768990528943
+  },
+  {
+    "id": 1074,
+    "term": "soon",
+    "meaning": "yakında",
+    "example": "See you soon!",
+    "type": "adverb",
+    "level": "A2"
+  },
+  {
+    "id": 1075,
+    "term": "together",
+    "meaning": "birlikte",
+    "example": "We went to the cinema together.",
+    "type": "adverb",
+    "level": "A2"
+  },
+  {
+    "id": 1076,
+    "term": "unfortunately",
+    "meaning": "ne yazık ki, maalesef",
+    "example": "Unfortunately, I can't come.",
+    "type": "adverb",
+    "level": "B1"
+  },
+  {
+    "id": 1077,
+    "term": "attitude",
+    "meaning": "tavır, tutum",
+    "example": "His attitude is very positive.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1078,
+    "term": "confidence",
+    "meaning": "güven, özgüven",
+    "example": "You need to have confidence in yourself.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1079,
+    "term": "depressed",
+    "meaning": "depresif, bunalmış",
+    "example": "He felt very depressed.",
+    "type": "adjective",
+    "level": "B1"
+  },
+  {
+    "id": 1080,
+    "term": "embarrassed",
+    "meaning": "utanmış",
+    "example": "I felt so embarrassed.",
+    "type": "adjective",
+    "level": "B1"
+  },
+  {
+    "id": 1081,
+    "term": "grateful",
+    "meaning": "minnettar",
+    "example": "I am grateful for your help.",
+    "type": "adjective",
+    "level": "B1"
+  },
+  {
+    "id": 1082,
+    "term": "jealous",
+    "meaning": "kıskanç",
+    "example": "She was jealous of her sister.",
+    "type": "adjective",
+    "level": "B1"
+  },
+  {
+    "id": 1083,
+    "term": "patience",
+    "meaning": "sabır",
+    "example": "You need a lot of patience.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1084,
+    "term": "relaxed",
+    "meaning": "rahatlamış",
+    "example": "I feel very relaxed now.",
+    "type": "adjective",
+    "level": "B1"
+  },
+  {
+    "id": 1085,
+    "term": "stressed",
+    "meaning": "stresli",
+    "example": "He is very stressed about work.",
+    "type": "adjective",
+    "level": "B1",
+    "status": "easy",
+    "reviewDate": 1769006225256
+  },
+  {
+    "id": 1086,
+    "term": "wonder",
+    "meaning": "merak etmek",
+    "example": "I wonder why he left.",
+    "type": "verb",
+    "level": "B1"
+  },
+  {
+    "id": 1087,
+    "term": "application",
+    "meaning": "başvuru, uygulama",
+    "example": "I sent my job application.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1088,
+    "term": "career",
+    "meaning": "kariyer",
+    "example": "She has a successful career.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1089,
+    "term": "conference",
+    "meaning": "konferans",
+    "example": "The conference starts at 9 AM.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1090,
+    "term": "department",
+    "meaning": "bölüm, departman",
+    "example": "He works in the sales department.",
+    "type": "noun",
+    "level": "A2"
+  },
+  {
+    "id": 1091,
+    "term": "employ",
+    "meaning": "işe almak, çalıştırmak",
+    "example": "The company employs 50 people.",
+    "type": "verb",
+    "level": "B1",
+    "status": "easy",
+    "reviewDate": "2026-01-25T17:27:27.400Z",
+    "interval": 10,
+    "repetition": 1,
+    "ef": 2.6
+  },
+  {
+    "id": 1092,
+    "term": "industry",
+    "meaning": "endüstri, sanayi",
+    "example": "The car industry is growing.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1093,
+    "term": "knowledge",
+    "meaning": "bilgi",
+    "example": "Knowledge is power.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1094,
+    "term": "management",
+    "meaning": "yönetim",
+    "example": "The management rejected the proposal.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1095,
+    "term": "product",
+    "meaning": "ürün",
+    "example": "This is our best-selling product.",
+    "type": "noun",
+    "level": "A2"
+  },
+  {
+    "id": 1096,
+    "term": "skill",
+    "meaning": "beceri, yetenek",
+    "example": "Reading is an important skill.",
+    "type": "noun",
+    "level": "A2"
+  },
+  {
+    "id": 1097,
+    "term": "training",
+    "meaning": "eğitim, antrenman",
+    "example": "I need more training immediately.",
+    "type": "noun",
+    "level": "A2"
+  },
+  {
+    "id": 1098,
+    "term": "community",
+    "meaning": "topluluk",
+    "example": "We live in a nice community.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1099,
+    "term": "culture",
+    "meaning": "kültür",
+    "example": "I enjoy learning about other cultures.",
+    "type": "noun",
+    "level": "A2"
+  },
+  {
+    "id": 1100,
+    "term": "environment",
+    "meaning": "çevre",
+    "example": "We must protect the environment.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1101,
+    "term": "fashion",
+    "meaning": "moda",
+    "example": "She is interested in fashion.",
+    "type": "noun",
+    "level": "A2"
+  },
+  {
+    "id": 1102,
+    "term": "global",
+    "meaning": "küresel",
+    "example": "Global warming is a serious issue.",
+    "type": "adjective",
+    "level": "B1",
+    "status": "easy",
+    "reviewDate": 1769178581915
+  },
+  {
+    "id": 1103,
+    "term": "identity",
+    "meaning": "kimlik",
+    "example": "Can I see your identity card?",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1104,
+    "term": "media",
+    "meaning": "medya",
+    "example": "The media reported the news.",
+    "type": "noun",
+    "level": "B1",
+    "status": "easy",
+    "reviewDate": 1769064005650
+  },
+  {
+    "id": 1105,
+    "term": "population",
+    "meaning": "nüfus",
+    "example": "The population of the city is growing.",
+    "type": "noun",
+    "level": "A2"
+  },
+  {
+    "id": 1106,
+    "term": "society",
+    "meaning": "toplum",
+    "example": "We live in a multicultural society.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1107,
+    "term": "volunteer",
+    "meaning": "gönüllü",
+    "example": "She is a volunteer at the hospital.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1108,
+    "term": "access",
+    "meaning": "erişim",
+    "example": "I don't have access to the internet.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1109,
+    "term": "benefit",
+    "meaning": "fayda",
+    "example": "There are many benefits to exercise.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1110,
+    "term": "challenge",
+    "meaning": "meydan okuma, zorluk",
+    "example": "This job is a big challenge.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1111,
+    "term": "evidence",
+    "meaning": "kanıt",
+    "example": "There is no evidence of a crime.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1112,
+    "term": "factor",
+    "meaning": "faktör, etken",
+    "example": "Price is an important factor.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1113,
+    "term": "goal",
+    "meaning": "hedef",
+    "example": "My goal is to learn English.",
+    "type": "noun",
+    "level": "A2"
+  },
+  {
+    "id": 1114,
+    "term": "impact",
+    "meaning": "etki",
+    "example": "The internet has had a huge impact.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1115,
+    "term": "method",
+    "meaning": "yöntem",
+    "example": "What method did you use?",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1116,
+    "term": "purpose",
+    "meaning": "amaç",
+    "example": "What is the purpose of your visit?",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1117,
+    "term": "source",
+    "meaning": "kaynak",
+    "example": "Light is a source of energy.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "id": 1118,
+    "term": "theory",
+    "meaning": "teori",
+    "example": "I have a theory about that.",
+    "type": "noun",
+    "level": "B1"
+  },
+  {
+    "term": "suddenly",
+    "meaning": "birden, aniden",
+    "example": "Suddenly, it started to rain.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1119
+  },
+  {
+    "term": "fortunately",
+    "meaning": "neyse ki, iyi ki",
+    "example": "Fortunately, no one was injured.",
+    "type": "adverb",
+    "level": "B1",
+    "id": 1120,
+    "status": "easy",
+    "reviewDate": 1769006262176
+  },
+  {
+    "term": "possible",
+    "meaning": "mümkün",
+    "example": "It is possible to finish today.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1121
+  },
+  {
+    "term": "impossible",
+    "meaning": "imkânsız",
+    "example": "It is impossible to fly without wings.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1122
+  },
+  {
+    "term": "lovely",
+    "meaning": "sevimli, güzel",
+    "example": "What a lovely day!",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1123
+  },
+  {
+    "term": "strange",
+    "meaning": "garip, ilginç",
+    "example": "That is a strange story.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1124
+  },
+  {
+    "term": "interesting",
+    "meaning": "ilginç, ilgi çekici",
+    "example": "This book is very interesting.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1125
+  },
+  {
+    "term": "obviously",
+    "meaning": "açıkça, belli ki",
+    "example": "Obviously, he was lying.",
+    "type": "adverb",
+    "level": "B1",
+    "id": 1126
+  },
+  {
+    "term": "definitely",
+    "meaning": "kesinlikle",
+    "example": "I will definitely come.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1127
+  },
+  {
+    "term": "certainly",
+    "meaning": "kesinlikle, şüphesiz",
+    "example": "I will certainly help you.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1128
+  },
+  {
+    "term": "exactly",
+    "meaning": "tam olarak",
+    "example": "That is exactly what I meant.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1129
+  },
+  {
+    "term": "completely",
+    "meaning": "tamamen, tamamıyla",
+    "example": "I completely agree with you.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1130
+  },
+  {
+    "term": "strongly",
+    "meaning": "şiddetle",
+    "example": "I strongly disagree.",
+    "type": "adverb",
+    "level": "B1",
+    "id": 1131
+  },
+  {
+    "term": "severely",
+    "meaning": "şiddetli bir şekilde",
+    "example": "He was severely injured.",
+    "type": "adverb",
+    "level": "B1",
+    "id": 1132
+  },
+  {
+    "term": "silently",
+    "meaning": "sessizce",
+    "example": "She left silently.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1133
+  },
+  {
+    "term": "slowly",
+    "meaning": "yavaşça",
+    "example": "Walk slowly, please.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1134
+  },
+  {
+    "term": "calmly",
+    "meaning": "sakince",
+    "example": "He spoke calmly.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1135
+  },
+  {
+    "term": "carefully",
+    "meaning": "dikkatlice",
+    "example": "Drive carefully!",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1136
+  },
+  {
+    "term": "immediately",
+    "meaning": "hemen, derhal",
+    "example": "Come here immediately!",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1137
+  },
+  {
+    "term": "naturally",
+    "meaning": "doğal olarak",
+    "example": "Naturally, I was surprised.",
+    "type": "adverb",
+    "level": "B1",
+    "id": 1138
+  },
+  {
+    "term": "surely",
+    "meaning": "muhakkak, elbette",
+    "example": "Surely you can help me.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1139
+  },
+  {
+    "term": "frequently",
+    "meaning": "sıkça, sıklıkla",
+    "example": "I visit them frequently.",
+    "type": "adverb",
+    "level": "B1",
+    "id": 1140
+  },
+  {
+    "term": "frequent",
+    "meaning": "sık, sık sık olan",
+    "example": "He is a frequent visitor.",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1141
+  },
+  {
+    "term": "excited",
+    "meaning": "heyecanlı",
+    "example": "I am so excited about the trip!",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1142
+  },
+  {
+    "term": "disappointed",
+    "meaning": "hayal kırıklığına uğramış",
+    "example": "I was disappointed with the result.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1143
+  },
+  {
+    "term": "patient",
+    "meaning": "sabırlı",
+    "example": "You need to be patient.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1144
+  },
+  {
+    "term": "impatient",
+    "meaning": "sabırsız",
+    "example": "He is very impatient.",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1145,
+    "status": "hard",
+    "reviewDate": "2026-01-26T17:04:49.773Z",
+    "interval": 1,
+    "repetition": 0,
+    "ef": 2.5
+  },
+  {
+    "term": "complain",
+    "meaning": "şikâyet etmek",
+    "example": "She always complains about the weather.",
+    "type": "verb",
+    "level": "A2",
+    "id": 1146
+  },
+  {
+    "term": "whenever",
+    "meaning": "her ne zaman",
+    "example": "Come whenever you want.",
+    "type": "conjunction",
+    "level": "A2",
+    "id": 1147,
+    "status": "easy",
+    "reviewDate": "2026-01-25T17:24:47.124Z",
+    "interval": 10,
+    "repetition": 1,
+    "ef": 2.6
+  },
+  {
+    "term": "during",
+    "meaning": "sırasında, esnasında",
+    "example": "I fell asleep during the movie.",
+    "type": "preposition",
+    "level": "A2",
+    "id": 1148
+  },
+  {
+    "term": "around",
+    "meaning": "etrafında, çevresinde",
+    "example": "Walk around the park.",
+    "type": "preposition",
+    "level": "A2",
+    "id": 1149
+  },
+  {
+    "term": "towards",
+    "meaning": "doğru, -e doğru",
+    "example": "He walked towards me.",
+    "type": "preposition",
+    "level": "A2",
+    "id": 1150
+  },
+  {
+    "term": "against",
+    "meaning": "karşı, aykırı",
+    "example": "I am against this idea.",
+    "type": "preposition",
+    "level": "A2",
+    "id": 1151
+  },
+  {
+    "term": "near",
+    "meaning": "yakın",
+    "example": "The shop is near my house.",
+    "type": "preposition",
+    "level": "A2",
+    "id": 1152
+  },
+  {
+    "term": "nearby",
+    "meaning": "yakında, yakınlarda",
+    "example": "There is a park nearby.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1153
+  },
+  {
+    "term": "nearly",
+    "meaning": "neredeyse",
+    "example": "I nearly forgot!",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1154
+  },
+  {
+    "term": "except",
+    "meaning": "hariç",
+    "example": "Everyone came except John.",
+    "type": "preposition",
+    "level": "A2",
+    "id": 1155
+  },
+  {
+    "term": "literally",
+    "meaning": "gerçekten, kelimenin tam anlamıyla",
+    "example": "I literally ran all the way.",
+    "type": "adverb",
+    "level": "B1",
+    "id": 1156
+  },
+  {
+    "term": "responsible",
+    "meaning": "sorumlu",
+    "example": "Who is responsible for this?",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1157
+  },
+  {
+    "term": "responsibility",
+    "meaning": "sorumluluk",
+    "example": "It is your responsibility.",
+    "type": "noun",
+    "level": "B1",
+    "id": 1158
+  },
+  {
+    "term": "necessary",
+    "meaning": "gerekli",
+    "example": "It is necessary to study.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1159
+  },
+  {
+    "term": "excellent",
+    "meaning": "mükemmel, harika",
+    "example": "Your work is excellent!",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1160
+  },
+  {
+    "term": "amazingly",
+    "meaning": "şaşırtıcı derecede",
+    "example": "She is amazingly talented.",
+    "type": "adverb",
+    "level": "B1",
+    "id": 1161
+  },
+  {
+    "term": "independent",
+    "meaning": "bağımsız",
+    "example": "She is an independent woman.",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1162
+  },
+  {
+    "term": "identical",
+    "meaning": "aynı, özdeş",
+    "example": "They look identical.",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1163
+  },
+  {
+    "term": "decide",
+    "meaning": "karar vermek",
+    "example": "I cannot decide what to do.",
+    "type": "verb",
+    "level": "A2",
+    "id": 1164
+  },
+  {
+    "term": "experience",
+    "meaning": "tecrübe, deneyim",
+    "example": "He has a lot of experience.",
+    "type": "noun",
+    "level": "A2",
+    "id": 1165
+  },
+  {
+    "term": "comfortable",
+    "meaning": "rahat, konforlu",
+    "example": "This chair is very comfortable.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1166
+  },
+  {
+    "term": "fancy",
+    "meaning": "süslü, şık",
+    "example": "She wore a fancy dress.",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1167
+  },
+  {
+    "term": "common",
+    "meaning": "yaygın, ortak",
+    "example": "This is a common problem.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1168
+  },
+  {
+    "term": "delay",
+    "meaning": "gecikme",
+    "example": "There was a delay at the airport.",
+    "type": "noun",
+    "level": "B1",
+    "id": 1169
+  },
+  {
+    "term": "confess",
+    "meaning": "itiraf etmek",
+    "example": "He confessed to the crime.",
+    "type": "verb",
+    "level": "B1",
+    "id": 1170
+  },
+  {
+    "term": "suffer",
+    "meaning": "acı çekmek",
+    "example": "She suffered a lot.",
+    "type": "verb",
+    "level": "B1",
+    "id": 1171
+  },
+  {
+    "term": "retired",
+    "meaning": "emekli",
+    "example": "My father is retired.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1172
+  },
+  {
+    "term": "forever",
+    "meaning": "sonsuza dek",
+    "example": "I will love you forever.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1173
+  },
+  {
+    "term": "always",
+    "meaning": "daima, her zaman",
+    "example": "She is always happy.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1174
+  },
+  {
+    "term": "convert",
+    "meaning": "dönüştürmek",
+    "example": "Convert this file to PDF.",
+    "type": "verb",
+    "level": "B1",
+    "id": 1175
+  },
+  {
+    "term": "compare",
+    "meaning": "karşılaştırmak",
+    "example": "Compare these two pictures.",
+    "type": "verb",
+    "level": "A2",
+    "id": 1176
+  },
+  {
+    "term": "usual",
+    "meaning": "olağan, her zamanki",
+    "example": "This is my usual route.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1177
+  },
+  {
+    "term": "advantage",
+    "meaning": "avantaj",
+    "example": "What is the advantage of this?",
+    "type": "noun",
+    "level": "B1",
+    "id": 1178
+  },
+  {
+    "term": "disadvantage",
+    "meaning": "dezavantaj",
+    "example": "There are some disadvantages.",
+    "type": "noun",
+    "level": "B1",
+    "id": 1179
+  },
+  {
+    "term": "speech",
+    "meaning": "konuşma",
+    "example": "He gave a great speech.",
+    "type": "noun",
+    "level": "B1",
+    "id": 1180
+  },
+  {
+    "term": "efficient",
+    "meaning": "verimli",
+    "example": "This is an efficient method.",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1181
+  },
+  {
+    "term": "effective",
+    "meaning": "etkili",
+    "example": "This medicine is very effective.",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1182
+  },
+  {
+    "term": "efficiently",
+    "meaning": "verimli bir şekilde",
+    "example": "Work efficiently!",
+    "type": "adverb",
+    "level": "B1",
+    "id": 1183
+  },
+  {
+    "term": "effectively",
+    "meaning": "etkili bir şekilde",
+    "example": "Use your time effectively.",
+    "type": "adverb",
+    "level": "B1",
+    "id": 1184
+  },
+  {
+    "term": "familiar",
+    "meaning": "tanıdık, aşina",
+    "example": "This place looks familiar.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1185,
+    "status": "easy",
+    "reviewDate": "2026-01-26T17:04:36.691Z",
+    "interval": 1,
+    "repetition": 1,
+    "ef": 2.6
+  },
+  {
+    "term": "fluent",
+    "meaning": "akıcı",
+    "example": "She speaks fluent English.",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1186
+  },
+  {
+    "term": "fluently",
+    "meaning": "akıcı bir şekilde",
+    "example": "He speaks English fluently.",
+    "type": "adverb",
+    "level": "B1",
+    "id": 1187
+  },
+  {
+    "term": "bother",
+    "meaning": "rahatsız etmek",
+    "example": "Sorry to bother you.",
+    "type": "verb",
+    "level": "A2",
+    "id": 1188
+  },
+  {
+    "term": "invitation",
+    "meaning": "davetiye",
+    "example": "I received an invitation.",
+    "type": "noun",
+    "level": "A2",
+    "id": 1189
+  },
+  {
+    "term": "invite",
+    "meaning": "davet etmek",
+    "example": "I want to invite you to dinner.",
+    "type": "verb",
+    "level": "A2",
+    "id": 1190
+  },
+  {
+    "term": "especially",
+    "meaning": "özellikle",
+    "example": "I love fruits, especially apples.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1191
+  },
+  {
+    "term": "shameful",
+    "meaning": "utanç verici",
+    "example": "That was a shameful act.",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1192
+  },
+  {
+    "term": "talent",
+    "meaning": "yetenek",
+    "example": "She has a talent for music.",
+    "type": "noun",
+    "level": "A2",
+    "id": 1193
+  },
+  {
+    "term": "gather",
+    "meaning": "toplamak, toplanmak",
+    "example": "People gathered in the square.",
+    "type": "verb",
+    "level": "B1",
+    "id": 1194,
+    "status": "easy",
+    "reviewDate": "2026-01-25T17:24:44.171Z",
+    "interval": 10,
+    "repetition": 1,
+    "ef": 2.6
+  },
+  {
+    "term": "above",
+    "meaning": "üstünde, yukarıda",
+    "example": "The picture is above the sofa.",
+    "type": "preposition",
+    "level": "A2",
+    "id": 1195
+  },
+  {
+    "term": "below",
+    "meaning": "altında, aşağıda",
+    "example": "See the note below.",
+    "type": "preposition",
+    "level": "A2",
+    "id": 1196
+  },
+  {
+    "term": "sunset",
+    "meaning": "gün batımı",
+    "example": "The sunset was beautiful.",
+    "type": "noun",
+    "level": "A2",
+    "id": 1197
+  },
+  {
+    "term": "sunrise",
+    "meaning": "gündoğumu",
+    "example": "We watched the sunrise.",
+    "type": "noun",
+    "level": "A2",
+    "id": 1198
+  },
+  {
+    "term": "heavy",
+    "meaning": "ağır",
+    "example": "This box is too heavy.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1199
+  },
+  {
+    "term": "light",
+    "meaning": "hafif",
+    "example": "This bag is very light.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1200
+  },
+  {
+    "term": "progress",
+    "meaning": "ilerleme",
+    "example": "You are making good progress.",
+    "type": "noun",
+    "level": "B1",
+    "id": 1201
+  },
+  {
+    "term": "forward",
+    "meaning": "ileri, ileriye",
+    "example": "Move forward, please.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1202
+  },
+  {
+    "term": "simple",
+    "meaning": "basit",
+    "example": "This is a simple question.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1203
+  },
+  {
+    "term": "difficult",
+    "meaning": "zor",
+    "example": "This exam is very difficult.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1204
+  },
+  {
+    "term": "express",
+    "meaning": "ifade etmek",
+    "example": "I cannot express my feelings.",
+    "type": "verb",
+    "level": "B1",
+    "id": 1205
+  },
+  {
+    "term": "disturb",
+    "meaning": "rahatsız etmek",
+    "example": "Do not disturb me now.",
+    "type": "verb",
+    "level": "B1",
+    "id": 1206
+  },
+  {
+    "term": "basic",
+    "meaning": "temel",
+    "example": "These are basic rules.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1207
+  },
+  {
+    "term": "intermediate",
+    "meaning": "orta seviye",
+    "example": "I am at intermediate level.",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1208
+  },
+  {
+    "term": "advanced",
+    "meaning": "gelişmiş, ileri düzey",
+    "example": "This is an advanced course.",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1209
+  },
+  {
+    "term": "respect",
+    "meaning": "saygı",
+    "example": "I have great respect for him.",
+    "type": "noun",
+    "level": "B1",
+    "id": 1210
+  },
+  {
+    "term": "probably",
+    "meaning": "muhtemelen",
+    "example": "He will probably come.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1211
+  },
+  {
+    "term": "solution",
+    "meaning": "çözüm",
+    "example": "We need to find a solution.",
+    "type": "noun",
+    "level": "B1",
+    "id": 1212
+  },
+  {
+    "term": "conclusion",
+    "meaning": "sonuç",
+    "example": "What is your conclusion?",
+    "type": "noun",
+    "level": "B1",
+    "id": 1213
+  },
+  {
+    "term": "result",
+    "meaning": "sonuç",
+    "example": "What was the result?",
+    "type": "noun",
+    "level": "A2",
+    "id": 1214
+  },
+  {
+    "term": "situation",
+    "meaning": "durum",
+    "example": "The situation is serious.",
+    "type": "noun",
+    "level": "A2",
+    "id": 1215
+  },
+  {
+    "term": "condition",
+    "meaning": "koşul, durum",
+    "example": "What are the conditions?",
+    "type": "noun",
+    "level": "B1",
+    "id": 1216
+  },
+  {
+    "term": "threaten",
+    "meaning": "tehdit etmek",
+    "example": "He threatened me.",
+    "type": "verb",
+    "level": "B1",
+    "id": 1217
+  },
+  {
+    "term": "naughty",
+    "meaning": "yaramaz, haylaz",
+    "example": "That is a naughty child.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1218
+  },
+  {
+    "term": "victim",
+    "meaning": "kurban, mağdur",
+    "example": "He was a victim of crime.",
+    "type": "noun",
+    "level": "B1",
+    "id": 1219
+  },
+  {
+    "term": "teenage",
+    "meaning": "genç, ergen",
+    "example": "She has teenage children.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1220
+  },
+  {
+    "term": "scary",
+    "meaning": "korkutucu",
+    "example": "That was a scary movie.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1221
+  },
+  {
+    "term": "setup",
+    "meaning": "kurmak, kurulum",
+    "example": "The setup was easy.",
+    "type": "noun",
+    "level": "B1",
+    "id": 1222,
+    "status": "easy",
+    "reviewDate": 1769006094192
+  },
+  {
+    "term": "decision",
+    "meaning": "karar",
+    "example": "I made a difficult decision.",
+    "type": "noun",
+    "level": "A2",
+    "id": 1223
+  },
+  {
+    "term": "simply",
+    "meaning": "basitçe",
+    "example": "Simply click here.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1224
+  },
+  {
+    "term": "scream",
+    "meaning": "haykırmak, çığlık atmak",
+    "example": "She screamed in fear.",
+    "type": "verb",
+    "level": "A2",
+    "id": 1225
+  },
+  {
+    "term": "shout",
+    "meaning": "bağırmak",
+    "example": "Do not shout at me!",
+    "type": "verb",
+    "level": "A2",
+    "id": 1226
+  },
+  {
+    "term": "explore",
+    "meaning": "keşfetmek",
+    "example": "Let us explore the city.",
+    "type": "verb",
+    "level": "B1",
+    "id": 1227
+  },
+  {
+    "term": "research",
+    "meaning": "araştırmak",
+    "example": "I need to research this topic.",
+    "type": "verb",
+    "level": "B1",
+    "id": 1228
+  },
+  {
+    "term": "discover",
+    "meaning": "keşfetmek",
+    "example": "They discovered a new island.",
+    "type": "verb",
+    "level": "A2",
+    "id": 1229
+  },
+  {
+    "term": "discovery",
+    "meaning": "keşif",
+    "example": "This is an important discovery.",
+    "type": "noun",
+    "level": "B1",
+    "id": 1230
+  },
+  {
+    "term": "invention",
+    "meaning": "buluş, icat",
+    "example": "The telephone was a great invention.",
+    "type": "noun",
+    "level": "B1",
+    "id": 1231
+  },
+  {
+    "term": "possibility",
+    "meaning": "olasılık, ihtimal",
+    "example": "There is a possibility of rain.",
+    "type": "noun",
+    "level": "B1",
+    "id": 1232,
+    "status": "easy",
+    "reviewDate": "2026-01-25T17:24:50.307Z",
+    "interval": 10,
+    "repetition": 1,
+    "ef": 2.6
+  },
+  {
+    "term": "experiment",
+    "meaning": "deney",
+    "example": "We did an experiment in class.",
+    "type": "noun",
+    "level": "B1",
+    "id": 1233
+  },
+  {
+    "term": "several",
+    "meaning": "birkaç",
+    "example": "I have several questions.",
+    "type": "determiner",
+    "level": "A2",
+    "id": 1234
+  },
+  {
+    "term": "solve",
+    "meaning": "çözmek",
+    "example": "Can you solve this problem?",
+    "type": "verb",
+    "level": "A2",
+    "id": 1235
+  },
+  {
+    "term": "creative",
+    "meaning": "yaratıcı",
+    "example": "She is very creative.",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1236
+  },
+  {
+    "term": "hopeful",
+    "meaning": "umutlu",
+    "example": "I am hopeful about the future.",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1237
+  },
+  {
+    "term": "peaceful",
+    "meaning": "huzurlu",
+    "example": "It is a peaceful place.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1238,
+    "status": "easy",
+    "reviewDate": "2026-01-25T17:24:52.491Z",
+    "interval": 10,
+    "repetition": 1,
+    "ef": 2.6
+  },
+  {
+    "term": "optimistic",
+    "meaning": "iyimser",
+    "example": "She is very optimistic.",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1239
+  },
+  {
+    "term": "sensible",
+    "meaning": "mantıklı, akıllıca",
+    "example": "That is a sensible decision.",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1240
+  },
+  {
+    "term": "regularly",
+    "meaning": "düzenli olarak",
+    "example": "I exercise regularly.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1241
+  },
+  {
+    "term": "powerful",
+    "meaning": "güçlü",
+    "example": "He is a powerful man.",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1242
+  },
+  {
+    "term": "vacation",
+    "meaning": "tatil",
+    "example": "I am going on vacation.",
+    "type": "noun",
+    "level": "A2",
+    "id": 1243
+  },
+  {
+    "term": "holiday",
+    "meaning": "tatil",
+    "example": "We had a great holiday.",
+    "type": "noun",
+    "level": "A2",
+    "id": 1244
+  },
+  {
+    "term": "abroad",
+    "meaning": "yurt dışı",
+    "example": "He lives abroad.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1245
+  },
+  {
+    "term": "fatty",
+    "meaning": "yağlı",
+    "example": "Avoid fatty foods.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1246
+  },
+  {
+    "term": "technician",
+    "meaning": "teknisyen",
+    "example": "Call the technician.",
+    "type": "noun",
+    "level": "B1",
+    "id": 1247
+  },
+  {
+    "term": "mall",
+    "meaning": "alışveriş merkezi",
+    "example": "Let us go to the mall.",
+    "type": "noun",
+    "level": "A2",
+    "id": 1248
+  },
+  {
+    "term": "specifically",
+    "meaning": "özellikle",
+    "example": "I specifically asked for this.",
+    "type": "adverb",
+    "level": "B1",
+    "id": 1249
+  },
+  {
+    "term": "hopefully",
+    "meaning": "umarım, inşallah",
+    "example": "Hopefully, it will not rain.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1250
+  },
+  {
+    "term": "qualified",
+    "meaning": "nitelikli",
+    "example": "She is a qualified teacher.",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1251
+  },
+  {
+    "term": "adult",
+    "meaning": "yetişkin",
+    "example": "This is for adults only.",
+    "type": "noun",
+    "level": "A2",
+    "id": 1252
+  },
+  {
+    "term": "teenager",
+    "meaning": "genç, ergen",
+    "example": "He is a teenager.",
+    "type": "noun",
+    "level": "A2",
+    "id": 1253
+  },
+  {
+    "term": "kid",
+    "meaning": "çocuk",
+    "example": "The kids are playing.",
+    "type": "noun",
+    "level": "A2",
+    "id": 1254
+  },
+  {
+    "term": "swear",
+    "meaning": "yemin etmek",
+    "example": "I swear I did not do it.",
+    "type": "verb",
+    "level": "B1",
+    "id": 1255
+  },
+  {
+    "term": "contain",
+    "meaning": "içermek",
+    "example": "This box contains books.",
+    "type": "verb",
+    "level": "B1",
+    "id": 1256
+  },
+  {
+    "term": "include",
+    "meaning": "kapsamak, içermek",
+    "example": "The price includes tax.",
+    "type": "verb",
+    "level": "A2",
+    "id": 1257
+  },
+  {
+    "term": "additionally",
+    "meaning": "ek olarak",
+    "example": "Additionally, we need more time.",
+    "type": "adverb",
+    "level": "B1",
+    "id": 1258
+  },
+  {
+    "term": "distance",
+    "meaning": "mesafe",
+    "example": "What is the distance?",
+    "type": "noun",
+    "level": "A2",
+    "id": 1259
+  },
+  {
+    "term": "split",
+    "meaning": "bölmek",
+    "example": "Let us split the bill.",
+    "type": "verb",
+    "level": "B1",
+    "id": 1260
+  },
+  {
+    "term": "pretend",
+    "meaning": "numara yapmak, rol yapmak",
+    "example": "He is just pretending.",
+    "type": "verb",
+    "level": "B1",
+    "id": 1261
+  },
+  {
+    "term": "useful",
+    "meaning": "kullanışlı, faydalı",
+    "example": "This is very useful.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1262
+  },
+  {
+    "term": "convenient",
+    "meaning": "uygun, kullanışlı",
+    "example": "This is a convenient location.",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1263
+  },
+  {
+    "term": "trip",
+    "meaning": "seyahat, gezi",
+    "example": "We had a nice trip.",
+    "type": "noun",
+    "level": "A2",
+    "id": 1264
+  },
+  {
+    "term": "misunderstanding",
+    "meaning": "yanlış anlama",
+    "example": "There was a misunderstanding.",
+    "type": "noun",
+    "level": "B1",
+    "id": 1265
+  },
+  {
+    "term": "guide",
+    "meaning": "rehber",
+    "example": "Our guide was very helpful.",
+    "type": "noun",
+    "level": "A2",
+    "id": 1266
+  },
+  {
+    "term": "rush",
+    "meaning": "acele etmek",
+    "example": "Do not rush!",
+    "type": "verb",
+    "level": "A2",
+    "id": 1267
+  },
+  {
+    "term": "remarkable",
+    "meaning": "dikkat çekici, olağanüstü",
+    "example": "That is a remarkable achievement.",
+    "type": "adjective",
+    "level": "B1",
+    "id": 1268
+  },
+  {
+    "term": "ingenious",
+    "meaning": "ustaca, yaratıcı",
+    "example": "That is an ingenious idea.",
+    "type": "adjective",
+    "level": "C1",
+    "id": 1269
+  },
+  {
+    "term": "occasionally",
+    "meaning": "ara sıra, bazen",
+    "example": "I visit them occasionally.",
+    "type": "adverb",
+    "level": "B1",
+    "id": 1270
+  },
+  {
+    "term": "observation",
+    "meaning": "gözlem",
+    "example": "This is an interesting observation.",
+    "type": "noun",
+    "level": "B1",
+    "id": 1271
+  },
+  {
+    "term": "expect",
+    "meaning": "beklemek, ummak",
+    "example": "I expect you to be on time.",
+    "type": "verb",
+    "level": "A2",
+    "id": 1272
+  },
+  {
+    "term": "wait",
+    "meaning": "beklemek",
+    "example": "Please wait here.",
+    "type": "verb",
+    "level": "A2",
+    "id": 1273
+  },
+  {
+    "term": "attention",
+    "meaning": "dikkat",
+    "example": "Pay attention!",
+    "type": "noun",
+    "level": "A2",
+    "id": 1274
+  },
+  {
+    "term": "underground",
+    "meaning": "yeraltı",
+    "example": "Take the underground.",
+    "type": "noun",
+    "level": "A2",
+    "id": 1275
+  },
+  {
+    "term": "silence",
+    "meaning": "sessizlik",
+    "example": "There was complete silence.",
+    "type": "noun",
+    "level": "A2",
+    "id": 1276
+  },
+  {
+    "term": "in a bit",
+    "meaning": "birazdan, az sonra",
+    "example": "I will call you in a bit.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1277
+  },
+  {
+    "term": "a bit of",
+    "meaning": "biraz, birazcık",
+    "example": "I need a bit of help.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1278
+  },
+  {
+    "term": "without you",
+    "meaning": "sensiz",
+    "example": "I cannot do this without you.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1279,
+    "status": "easy",
+    "reviewDate": "2026-01-26T17:04:55.991Z",
+    "interval": 1,
+    "repetition": 1,
+    "ef": 2.6
+  },
+  {
+    "term": "day after day",
+    "meaning": "günden güne",
+    "example": "Day after day, he got better.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1280
+  },
+  {
+    "term": "for years",
+    "meaning": "yıllarca",
+    "example": "I have known him for years.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1281
+  },
+  {
+    "term": "next to",
+    "meaning": "yanında",
+    "example": "Sit next to me.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1282
+  },
+  {
+    "term": "turn on",
+    "meaning": "açmak",
+    "example": "Turn on the light.",
+    "type": "phrasal verb",
+    "level": "A2",
+    "id": 1283
+  },
+  {
+    "term": "turn off",
+    "meaning": "kapatmak",
+    "example": "Turn off the TV.",
+    "type": "phrasal verb",
+    "level": "A2",
+    "id": 1284
+  },
+  {
+    "term": "lock",
+    "meaning": "kilitlemek",
+    "example": "Lock the door.",
+    "type": "verb",
+    "level": "A2",
+    "id": 1285
+  },
+  {
+    "term": "unlock",
+    "meaning": "kilidi açmak",
+    "example": "Unlock the door.",
+    "type": "verb",
+    "level": "A2",
+    "id": 1286
+  },
+  {
+    "term": "plug in",
+    "meaning": "prize takmak",
+    "example": "Plug in the charger.",
+    "type": "phrasal verb",
+    "level": "A2",
+    "id": 1287
+  },
+  {
+    "term": "unplug",
+    "meaning": "prizden çıkarmak",
+    "example": "Unplug the device.",
+    "type": "verb",
+    "level": "A2",
+    "id": 1288
+  },
+  {
+    "term": "in fact",
+    "meaning": "aslında",
+    "example": "In fact, I agree with you.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1289,
+    "status": "easy",
+    "reviewDate": "2026-01-26T17:06:47.769Z",
+    "interval": 1,
+    "repetition": 1,
+    "ef": 2.6
+  },
+  {
+    "term": "same",
+    "meaning": "aynı",
+    "example": "We have the same car.",
+    "type": "adjective",
+    "level": "A2",
+    "id": 1290
+  },
+  {
+    "term": "in short",
+    "meaning": "kısaca",
+    "example": "In short, we need more time.",
+    "type": "phrase",
+    "level": "B1",
+    "id": 1291
+  },
+  {
+    "term": "shortly",
+    "meaning": "kısa sürede, yakında",
+    "example": "He will arrive shortly.",
+    "type": "adverb",
+    "level": "B1",
+    "id": 1292
+  },
+  {
+    "term": "in addition",
+    "meaning": "ek olarak, ayrıca",
+    "example": "In addition, we need more staff.",
+    "type": "phrase",
+    "level": "B1",
+    "id": 1293
+  },
+  {
+    "term": "also",
+    "meaning": "ayrıca, da/de",
+    "example": "I also like pizza.",
+    "type": "adverb",
+    "level": "A2",
+    "id": 1294
+  },
+  {
+    "term": "moreover",
+    "meaning": "üstelik, ayrıca",
+    "example": "Moreover, it is very expensive.",
+    "type": "adverb",
+    "level": "B1",
+    "id": 1295
+  },
+  {
+    "term": "for instance",
+    "meaning": "örneğin",
+    "example": "For instance, you could try this.",
+    "type": "phrase",
+    "level": "B1",
+    "id": 1296
+  },
+  {
+    "term": "for example",
+    "meaning": "örneğin",
+    "example": "For example, apples are healthy.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1297
+  },
+  {
+    "term": "spare time",
+    "meaning": "boş zaman",
+    "example": "What do you do in your spare time?",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1298
+  },
+  {
+    "term": "get used to",
+    "meaning": "alışmak",
+    "example": "I need to get used to this.",
+    "type": "phrasal verb",
+    "level": "B1",
+    "id": 1299,
+    "status": "hard",
+    "reviewDate": 1768990521695
+  },
+  {
+    "term": "belong to",
+    "meaning": "ait olmak",
+    "example": "This book belongs to me.",
+    "type": "phrasal verb",
+    "level": "A2",
+    "id": 1300
+  },
+  {
+    "term": "be about to",
+    "meaning": "yapmak üzere olmak",
+    "example": "I am about to leave.",
+    "type": "phrase",
+    "level": "B1",
+    "id": 1301
+  },
+  {
+    "term": "in late july",
+    "meaning": "temmuzun sonlarında",
+    "example": "We will meet in late July.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1302
+  },
+  {
+    "term": "one of the best",
+    "meaning": "en iyilerinden biri",
+    "example": "This is one of the best films.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1303
+  },
+  {
+    "term": "each of you",
+    "meaning": "her biriniz",
+    "example": "Each of you will get a prize.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1304
+  },
+  {
+    "term": "each of us",
+    "meaning": "her birimiz",
+    "example": "Each of us has a role.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1305
+  },
+  {
+    "term": "none of us",
+    "meaning": "hiçbirimiz",
+    "example": "None of us knew the answer.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1306
+  },
+  {
+    "term": "each day",
+    "meaning": "her gün",
+    "example": "I study each day.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1307
+  },
+  {
+    "term": "each other",
+    "meaning": "birbirimizi",
+    "example": "We help each other.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1308
+  },
+  {
+    "term": "by the end",
+    "meaning": "sonunda",
+    "example": "By the end of the day, we finished.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1309
+  },
+  {
+    "term": "break up",
+    "meaning": "ayrılmak (ilişki)",
+    "example": "They broke up last year.",
+    "type": "phrasal verb",
+    "level": "B1",
+    "id": 1310
+  },
+  {
+    "term": "take care",
+    "meaning": "dikkatli ol",
+    "example": "Take care of yourself!",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1311
+  },
+  {
+    "term": "go ahead",
+    "meaning": "devam et",
+    "example": "Go ahead, I am listening.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1312
+  },
+  {
+    "term": "such as",
+    "meaning": "örneğin",
+    "example": "Fruits such as apples are healthy.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1313
+  },
+  {
+    "term": "as you see",
+    "meaning": "gördüğün gibi",
+    "example": "As you see, it is easy.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1314
+  },
+  {
+    "term": "as you understand",
+    "meaning": "anladığın gibi",
+    "example": "As you understand, we need help.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1315
+  },
+  {
+    "term": "as you wish",
+    "meaning": "nasıl istersen",
+    "example": "As you wish, we can go now.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1316
+  },
+  {
+    "term": "as far as i know",
+    "meaning": "bildiğim kadarıyla",
+    "example": "As far as I know, he is coming.",
+    "type": "phrase",
+    "level": "B1",
+    "id": 1317
+  },
+  {
+    "term": "that is why",
+    "meaning": "bu yüzden",
+    "example": "That is why I called you.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1318
+  },
+  {
+    "term": "if i am not mistaken",
+    "meaning": "yanılmıyorsam",
+    "example": "If I am not mistaken, you are John.",
+    "type": "phrase",
+    "level": "B1",
+    "id": 1319
+  },
+  {
+    "term": "so do i",
+    "meaning": "ben de",
+    "example": "I like pizza. So do I!",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1320
+  },
+  {
+    "term": "i got it",
+    "meaning": "anladım",
+    "example": "I got it, thanks!",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1321
+  },
+  {
+    "term": "just kidding",
+    "meaning": "şaka yapıyorum",
+    "example": "Just kidding, do not worry!",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1322
+  },
+  {
+    "term": "as far as i remember",
+    "meaning": "hatırladığım kadarıyla",
+    "example": "As far as I remember, it was Monday.",
+    "type": "phrase",
+    "level": "B1",
+    "id": 1323
+  },
+  {
+    "term": "not yet",
+    "meaning": "henüz değil",
+    "example": "Have you finished? Not yet.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1324
+  },
+  {
+    "term": "shut up",
+    "meaning": "kes sesini",
+    "example": "Shut up and listen!",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1325
+  },
+  {
+    "term": "hold on",
+    "meaning": "bekle",
+    "example": "Hold on, I am coming!",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1326
+  },
+  {
+    "term": "bless you",
+    "meaning": "çok yaşa",
+    "example": "Bless you! (after sneeze)",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1327
+  },
+  {
+    "term": "first of all",
+    "meaning": "öncelikle",
+    "example": "First of all, let me introduce myself.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1328
+  },
+  {
+    "term": "cheer up",
+    "meaning": "neşelen",
+    "example": "Cheer up! Everything will be fine.",
+    "type": "phrasal verb",
+    "level": "A2",
+    "id": 1329
+  },
+  {
+    "term": "calm down",
+    "meaning": "sakin ol",
+    "example": "Calm down and breathe.",
+    "type": "phrasal verb",
+    "level": "A2",
+    "id": 1330
+  },
+  {
+    "term": "watch out",
+    "meaning": "dikkatli ol",
+    "example": "Watch out for cars!",
+    "type": "phrasal verb",
+    "level": "A2",
+    "id": 1331
+  },
+  {
+    "term": "hurry up",
+    "meaning": "acele et",
+    "example": "Hurry up or we will be late!",
+    "type": "phrasal verb",
+    "level": "A2",
+    "id": 1332
+  },
+  {
+    "term": "no sweat",
+    "meaning": "dert etme, önemli değil",
+    "example": "No sweat, I can help you.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1333
+  },
+  {
+    "term": "says who",
+    "meaning": "kim demiş",
+    "example": "I cannot do it. Says who?",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1334
+  },
+  {
+    "term": "never mind",
+    "meaning": "boşver",
+    "example": "Never mind, it is not important.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1335
+  },
+  {
+    "term": "on time",
+    "meaning": "zamanında",
+    "example": "Please be on time.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1336
+  },
+  {
+    "term": "it makes sense",
+    "meaning": "mantıklı",
+    "example": "It makes sense to wait.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1337
+  },
+  {
+    "term": "way to go",
+    "meaning": "aferin, bravo",
+    "example": "Way to go! You did it!",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1338
+  },
+  {
+    "term": "do me a favour",
+    "meaning": "bana bir iyilik yap",
+    "example": "Can you do me a favour?",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1339
+  },
+  {
+    "term": "suit yourself",
+    "meaning": "sen bilirsin",
+    "example": "Suit yourself, I do not care.",
+    "type": "phrase",
+    "level": "B1",
+    "id": 1340
+  },
+  {
+    "term": "if you say so",
+    "meaning": "öyle diyorsan",
+    "example": "If you say so, I believe you.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1341
+  },
+  {
+    "term": "thanks to you",
+    "meaning": "senin sayende",
+    "example": "Thanks to you, we succeeded.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1342
+  },
+  {
+    "term": "because of you",
+    "meaning": "senin yüzünden",
+    "example": "Because of you, we are late.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1343
+  },
+  {
+    "term": "take it easy",
+    "meaning": "rahat ol, sakin ol",
+    "example": "Take it easy, everything is fine.",
+    "type": "phrase",
+    "level": "A2",
+    "id": 1344
+  },
+  {
+    "term": "you do not say",
+    "meaning": "hadi canım, öyle mi",
+    "example": "You do not say! I did not know that.",
+    "type": "phrase",
+    "level": "B1",
+    "id": 1345
+  },
+  {
+    "term": "just say the word",
+    "meaning": "söylemen yeter",
+    "example": "Just say the word and I will help.",
+    "type": "phrase",
+    "level": "B1",
+    "id": 1346
+  },
+  {
+    "term": "consider it done",
+    "meaning": "olmuş bil",
+    "example": "Consider it done, I will handle it.",
+    "type": "phrase",
+    "level": "B1",
+    "id": 1347
+  }
+]

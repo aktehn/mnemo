@@ -1,0 +1,53 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# others
+_bmad
+_bmad-output
+.agent
+
+# Dependencies
+node_modules
+
+# Build outputs
+dist
+dist-ssr
+release
+*.local
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# User data (vocabulary database)
+src/data/user_vocab.json
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Electron
+out/
+*.tgz
+
+# Testing
+coverage/
+.nyc_output/
