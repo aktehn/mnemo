@@ -271,13 +271,28 @@ app.on('activate', () => {
 
 // --- Data Management ---
 
-const VOCAB_FILE = path.join(__dirname, '../src/data/a2_vocab.json');
+const VOCAB_FILE_SEED = path.join(__dirname, '../src/data/a2_vocab.json');
+const VOCAB_FILE = path.join(app.getPath('userData'), 'vocab.json');
 
 // Helper to read words
 async function readWords() {
     try {
-        // In production, you might copy this to app.getPath('userData') first
-        return await fs.readJson(VOCAB_FILE);
+        // 1. Try to read from User Data (Customized data)
+        if (await fs.pathExists(VOCAB_FILE)) {
+            return await fs.readJson(VOCAB_FILE);
+        }
+
+        // 2. Fallback: Seed from initial JSON (if User Data empty)
+        // Check if seed file exists (Dev environment)
+        if (await fs.pathExists(VOCAB_FILE_SEED)) {
+            console.log('🌱 Seeding initial data from source...');
+            const seedData = await fs.readJson(VOCAB_FILE_SEED);
+            // Write to userData for future use
+            await fs.writeJson(VOCAB_FILE, seedData, { spaces: 2 });
+            return seedData;
+        }
+
+        return [];
     } catch (err) {
         console.error("Error reading vocab file:", err);
         return [];

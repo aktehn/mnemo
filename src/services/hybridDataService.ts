@@ -16,7 +16,8 @@ import { getSupabaseClient, isSupabaseAvailable, getCurrentUser } from './supaba
 import * as vocabularyService from './vocabularyService';
 import { useAppStore } from '../store';
 // @ts-ignore
-import a2Vocab from '../data/a2_vocab.json';
+// import a2Vocab from '../data/a2_vocab.json'; // Removed to prevent HMR loops and ensure data persistence via Electron
+
 
 /**
  * Sync configuration
@@ -79,13 +80,16 @@ export async function getAllWordsHybrid(): Promise<VocabularyWord[]> {
 
     if (settings.dataSource === 'dummy') {
         console.log('📦 DATA SOURCE: Dummy Mode (Settings Override)');
-        return a2Vocab as any as VocabularyWord[];
+        // return a2Vocab as any as VocabularyWord[];
+        return await vocabularyService.getAllWords();
     }
 
     // 1. GUEST (Not logged in): Fetch from a2_vocab.json
+    // 1. GUEST (Not logged in): Fetch from a2_vocab.json (via Electron Store)
     if (!user) {
-        console.log('📚 GUEST MODE: Loading from a2_vocab.json');
-        return a2Vocab as any as VocabularyWord[];
+        console.log('📚 GUEST MODE: Loading from Electron Store');
+        // return a2Vocab as any as VocabularyWord[];
+        return await vocabularyService.getAllWords();
     }
 
     const isAdmin = user.email === 'adag6534@gmail.com';
