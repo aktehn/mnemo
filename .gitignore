@@ -12,6 +12,10 @@ _bmad
 _bmad-output
 .agent
 
+_fe_agent
+_fe_bmad
+_fe_bmad_output
+
 # Dependencies
 node_modules
 
