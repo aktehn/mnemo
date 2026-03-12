@@ -1,11 +1,9 @@
 import { useState, useMemo } from 'react';
 import { Check, X } from 'lucide-react';
-import { useAppStore } from '../../store';
-import toast from 'react-hot-toast';
+import { useAppStore } from '../../../store';
 
 const SRSActionCard = () => {
     const words = useAppStore(state => state.words);
-    const isGuest = useAppStore(state => state.isGuest);
     const markAsLearned = useAppStore(state => state.actions.markAsLearned);
 
     // Filter available words (not learned)
@@ -26,13 +24,6 @@ const SRSActionCard = () => {
 
     const handleMarkAsLearned = async () => {
         if (!currentWord) return;
-
-        if (isGuest) {
-            toast.success('Kelime geçici olarak gizlendi. Kaydolursan ilerlemen saklanır! 🚀', {
-                icon: '👀',
-                style: { borderRadius: '12px', background: '#333', color: '#fff' }
-            });
-        }
 
         const success = await markAsLearned(currentWord.id);
         if (success) {

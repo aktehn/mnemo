@@ -1,5 +1,4 @@
-import { BarChart, BookOpen, Settings as SettingsIcon, LogOut, Crown } from 'lucide-react';
-import { useAppStore } from '../../../store';
+import { BarChart, BookOpen, Settings as SettingsIcon } from 'lucide-react';
 import { MnemoLogo } from '../../../components/MnemoLogo';
 
 interface SidebarProps {
@@ -8,10 +7,6 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ activeTab, setActiveTab }: SidebarProps) => {
-    const logout = useAppStore(state => state.actions.logout);
-    const user = useAppStore(state => state.user);
-    const isAdmin = useAppStore(state => state.isAdmin);
-    const isGuest = useAppStore(state => state.isGuest);
 
     return (
         <aside className="w-72 bg-white/95 backdrop-blur-xl border-r border-slate-100 flex flex-col fixed h-full z-20 transition-all duration-300 shadow-[4px_0_24px_-12px_rgba(0,0,0,0.02)]">
@@ -36,20 +31,17 @@ const Sidebar = ({ activeTab, setActiveTab }: SidebarProps) => {
                     <span className="text-[10px] font-black uppercase tracking-wider text-slate-300">Main Menu</span>
                 </div>
 
-                {isAdmin && (
-                    <NavItem
-                        icon={<BarChart size={20} />}
-                        label="Dashboard"
-                        active={activeTab === 'dashboard'}
-                        onClick={() => setActiveTab('dashboard')}
-                    />
-                )}
+                <NavItem
+                    icon={<BarChart size={20} />}
+                    label="Dashboard"
+                    active={activeTab === 'dashboard'}
+                    onClick={() => setActiveTab('dashboard')}
+                />
                 <NavItem
                     icon={<BookOpen size={20} />}
                     label="My Vocabulary"
                     active={activeTab === 'words'}
                     onClick={() => setActiveTab('words')}
-                    badge={!isGuest && activeTab !== 'words' ? undefined : undefined} // Cleaned up random badge logic
                 />
                 <NavItem
                     icon={<SettingsIcon size={20} />}
@@ -82,37 +74,7 @@ const Sidebar = ({ activeTab, setActiveTab }: SidebarProps) => {
                 )} */}
             </nav>
 
-            {/* Profile Section */}
-            <div className="p-4 mx-4 mb-4">
-                <div className="bg-slate-50/80 p-3 rounded-[20px] border border-slate-200/60 shadow-sm group hover:bg-white hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300">
-                    <div className="flex items-center gap-3 p-1 rounded-xl transition-colors">
-                        <div className="relative shrink-0">
-                            <img
-                                src={user?.user_metadata?.avatar_url || `https://ui-avatars.com/api/?name=${user?.email || (isGuest ? 'Guest' : 'Admin')}&background=0F172A&color=fff`}
-                                className="w-11 h-11 rounded-2xl object-cover ring-4 ring-white shadow-md group-hover:scale-105 transition-transform duration-300"
-                                alt="Profile"
-                            />
-                            <div className={`absolute -bottom-1 -right-1 w-4 h-4 border-[3px] border-white rounded-full ${user ? 'bg-emerald-500' : 'bg-slate-300'}`}></div>
-                        </div>
-                        <div className="flex-1 min-w-0">
-                            <p className="text-xs font-black text-slate-800 truncate group-hover:text-blue-600 transition-colors">
-                                {user?.user_metadata?.full_name || (isGuest ? 'Guest User' : (user?.email?.split('@')[0] || 'User'))}
-                            </p>
-                            <p className="text-[10px] text-slate-400 font-bold truncate flex items-center gap-1 mt-0.5">
-                                {isGuest ? 'Starter Plan' : (isAdmin ? 'Admin Console' : 'Pro Plan')}
-                            </p>
-                        </div>
-                    </div>
 
-                    <button
-                        onClick={logout}
-                        className="w-full mt-3 flex items-center justify-center gap-2 text-slate-400 hover:text-red-500 hover:bg-red-50 py-2.5 rounded-xl transition-all duration-200 text-xs font-bold border border-transparent hover:border-red-100 group-hover:bg-white"
-                    >
-                        <LogOut size={14} />
-                        <span>Sign Out</span>
-                    </button>
-                </div>
-            </div>
         </aside>
     );
 };

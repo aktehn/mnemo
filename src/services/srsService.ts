@@ -76,18 +76,7 @@ function getFutureDateMinutes(minutes: number): string {
     return date.toISOString();
 }
 
-/**
- * Calculates a future date based on a number of days from now.
- * (Kept for backwards compatibility)
- * 
- * @param {number} days - Number of days to add
- * @returns {string} ISO Date string
- */
-function getFutureDate(days: number): string {
-    const date = new Date();
-    date.setDate(date.getDate() + days);
-    return date.toISOString();
-}
+
 
 /**
  * Gets the initial SRS stats for a new word.

@@ -5,12 +5,7 @@
  */
 
 import { BarChart, Bar, XAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts';
-import { BlurredOverlay } from './BlurredOverlay';
-import { useAppStore } from '../../../../store';
-
 export const ActivityChart = () => {
-    const isGuest = useAppStore(state => state.isGuest);
-
     // Mock data - In real app, calculate from progress history
     const data = [
         { day: 'Mon', count: 12 },
@@ -21,10 +16,6 @@ export const ActivityChart = () => {
         { day: 'Sat', count: 8 },
         { day: 'Sun', count: 20 },
     ];
-
-    if (isGuest) {
-        return <BlurredOverlay title="Learning Activity" />;
-    }
 
     return (
         <div className="h-full flex flex-col p-5">

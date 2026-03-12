@@ -21,8 +21,8 @@ A minimalist, "always-on-top" styling option allows for micro-learning sessions 
 ### ⚡ Quick Add System
 Capture new words instantly. Mnemo integrates dictionary lookups to automatically populate definitions, examples, and phonetic transcriptions, reducing friction in your learning loop.
 
-### 🔄 Hybrid Data Sync
-Seamlessly switches between offline local storage and cloud synchronization with Supabase. Your progress is safe, whether you're online or off the grid.
+### 🔄 Local Data Store
+Fully offline local storage using electron store and file system. Your data stays on your machine.
 
 ### 🚀 Optimized CI/CD
 Fully automated pipeline using GitHub Actions v4. Smart matrix strategy runs minimal checks for PRs (Ubuntu/Node 20) while performing comprehensive multi-OS builds for Release tags.
@@ -32,7 +32,6 @@ Fully automated pipeline using GitHub Actions v4. Smart matrix strategy runs min
 - **Core**: Electron, React, TypeScript
 - **Styling**: TailwindCSS (Custom Design System)
 - **State**: Zustand
-- **Backend**: Supabase (Auth & Database)
 - **Build**: Vite
 
 ## Installation & Setup
@@ -42,7 +41,6 @@ Follow these steps to get Mnemo running locally.
 ### Prerequisites
 - Node.js (v18 or higher)
 - npm or yarn
-- Supabase Account (optional, for sync features)
 
 ### steps
 
@@ -57,20 +55,7 @@ Follow these steps to get Mnemo running locally.
    npm install
    ```
 
-3. **Environment Setup**
-   Create a `.env` file in the root directory. You can use the provided example as a template:
-   ```bash
-   cp .env.example .env
-   ```
-   
-   Open `.env` and configure your Supabase credentials:
-   ```env
-   VITE_SUPABASE_URL=your_supabase_project_url
-   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-   ```
-   > **Note**: If you don't have Supabase credentials, the app will default to offline mode.
-
-4. **Run Development Server**
+3. **Run Development Server**
    ```bash
    npm run dev
    ```

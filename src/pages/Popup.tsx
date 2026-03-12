@@ -17,11 +17,9 @@ const Popup = () => {
     const [mode, setMode] = useState<PopupMode>('review');
 
     useEffect(() => {
-        if (window.electron?.onRefreshWord) {
-            window.electron.onRefreshWord(() => {
-                setMode('review');
-            });
-        }
+        // NOTE: onRefreshWord is intentionally NOT registered here.
+        // VocabularyPopup.tsx handles it directly to pick a new random word.
+        // Registering it here too would override that listener (preload uses removeAllListeners).
 
         if (window.electron?.onOpenQuickAdd) {
             window.electron.onOpenQuickAdd(() => {

@@ -1,9 +1,6 @@
 import { Target } from 'lucide-react';
-import { useAppStore } from '../../store';
 
 const WeeklyGoalWidget = () => {
-    const isGuest = useAppStore(state => state.isGuest);
-
     // Mock data
     const weeklyTarget = 100;
     const currentProgress = 65;

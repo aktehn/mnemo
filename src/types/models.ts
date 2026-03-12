@@ -178,6 +178,8 @@ export interface ElectronAPI {
     // Settings
     updateSettings: (settings: Partial<AppSettings>) => void;
     getSettings: (callback: (settings: AppSettings) => void) => void;
+    /** Called when Electron main pushes updated settings to this window (e.g., on popup load or when admin changes settings) */
+    onSettingsUpdate: (callback: (settings: AppSettings) => void) => void;
 
     // Logging
     log: (message: string) => void;
