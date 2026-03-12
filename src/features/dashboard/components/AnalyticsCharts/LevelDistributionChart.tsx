@@ -6,7 +6,6 @@
 
 import { useMemo } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Label } from 'recharts';
-import { BlurredOverlay } from './BlurredOverlay';
 import { useAppStore } from '../../../../store';
 
 // Colors for the CEFR levels
@@ -21,7 +20,6 @@ const COLORS = {
 
 export const LevelDistributionChart = () => {
     const words = useAppStore(state => state.words);
-    const isGuest = useAppStore(state => state.isGuest);
 
     const data = useMemo(() => {
         const counts: Record<string, number> = {};
@@ -34,10 +32,6 @@ export const LevelDistributionChart = () => {
     }, [words]);
 
     const totalWords = words.length;
-
-    if (isGuest) {
-        return <BlurredOverlay title="Level Distribution" />;
-    }
 
     return (
         <div className="h-full flex flex-col p-5">

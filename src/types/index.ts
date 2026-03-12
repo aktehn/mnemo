@@ -21,20 +21,3 @@ export type {
     ElectronAPI,
 } from './models';
 
-// Export all database types
-export type {
-    VocabularyWordRow,
-    VocabularyWordInsert,
-    VocabularyWordUpdate,
-    UserProfileRow,
-    UserWordProgressRow,
-    Database,
-} from './database.types';
-
-// Export Supabase-specific types
-export type {
-    UserProfile,
-    UserPreferences,
-    WordPack,
-    UserWordProgress,
-} from './supabase';

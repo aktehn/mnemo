@@ -1,6 +1,6 @@
-import { useState, useEffect, useCallback, JSX } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Volume2, X, Lock, Sparkles, BrainCircuit } from 'lucide-react';
+import { useState, useEffect, useCallback, useRef, JSX } from 'react';
+import { motion } from 'framer-motion';
+import { Volume2, X, Sparkles, BrainCircuit } from 'lucide-react';
 import type { VocabularyWord } from '../../../types';
 import { calculateNextReview } from '../logic/srs';
 import { useAppStore } from '../../../store';
@@ -18,9 +18,7 @@ import { useAppStore } from '../../../store';
 const VocabularyPopup = (): JSX.Element | null => {
     // --- STATE ---
     const [word, setWord] = useState<VocabularyWord | null>(null);
-    const [isHovered, setIsHovered] = useState(false);
     const [lastAction, setLastAction] = useState<'easy' | 'hard' | null>(null);
-    const [guestLimitProps, setGuestLimitProps] = useState<{ isOpen: boolean, message: string }>({ isOpen: false, message: '' });
 
     // Session State
     const [sessionCount, setSessionCount] = useState(0);
@@ -31,10 +29,35 @@ const VocabularyPopup = (): JSX.Element | null => {
     const loadWords = useAppStore(state => state.actions.loadWords);
     const updateWord = useAppStore(state => state.actions.updateWord);
     const markAsLearned = useAppStore(state => state.actions.markAsLearned);
-    const isGuest = useAppStore(state => state.isGuest);
+
+    // Frequency from Electron main (TRUE single source of truth).
+    // Electron main.cjs pushes 'settings-data' via IPC when popup loads AND when
+    // admin changes settings. This bypasses the localStorage isolation between
+    // BrowserWindows (each window has its own separate localStorage in Electron).
+    // Fallback to 5 min if IPC hasn't responded yet.
+    const [frequencyMin, setFrequencyMin] = useState(5);
+
+    // Keep a ref to always access the LATEST words list in callbacks
+    // This prevents stale closures when onRefreshWord fires from Electron IPC
+    const wordsRef = useRef<VocabularyWord[]>(words);
+    useEffect(() => { wordsRef.current = words; }, [words]);
 
     // Initial Load
     useEffect(() => { loadWords(); }, [loadWords]);
+
+    // Listen for settings pushed from Electron main.cjs
+    // Main sends 'settings-data' on popup load AND whenever admin changes settings
+    useEffect(() => {
+        if (window.electron?.onSettingsUpdate) {
+            window.electron.onSettingsUpdate((settings: any) => {
+                const freq = settings?.frequency;
+                if (freq && freq > 0) {
+                    console.log(`[Popup] ✅ Received frequency from Electron main: ${freq} sec`);
+                    setFrequencyMin(freq);
+                }
+            });
+        }
+    }, []);
 
     // --- LOGIC ---
 
@@ -53,20 +76,41 @@ const VocabularyPopup = (): JSX.Element | null => {
         setLastAction(null);
     }, []);
 
+    // Use wordsRef so this callback never captures a stale word list
     const getRandomWord = useCallback(() => {
-        if (words.length > 0) loadRandomWordInternal(words);
-    }, [words, loadRandomWordInternal]);
+        const latestWords = wordsRef.current;
+        if (latestWords.length > 0) loadRandomWordInternal(latestWords);
+    }, [loadRandomWordInternal]);
 
     // Initial word set
     useEffect(() => {
         if (words.length > 0 && !word) getRandomWord();
     }, [words, word, getRandomWord]);
 
-    // Listen for external refresh requests
+    // -----------------------------------------------------------------------
+    // AUTO-REFRESH TIMER (Renderer-side, single source of truth)
+    // SECONDS BASED (frequencyMin is actually seconds now)
+    // -----------------------------------------------------------------------
+    useEffect(() => {
+        const intervalMs = frequencyMin * 1000;
+        console.log(`[Popup] Auto-refresh timer set: every ${frequencyMin} sec (${intervalMs}ms)`);
+        const timer = setInterval(() => {
+            console.log('[Popup] Auto-refresh: loading new word...');
+            getRandomWord();
+        }, intervalMs);
+        return () => clearInterval(timer);
+    }, [frequencyMin, getRandomWord]);
+
+    // Listen for Electron IPC refresh events (SECONDARY — triggers immediately on schedule tick)
     useEffect(() => {
         if (window.electron?.onRefreshWord) {
             window.electron.onRefreshWord(() => getRandomWord());
         }
+        return () => {
+            if (window.electron?.onRefreshWord) {
+                window.electron.onRefreshWord(() => { });
+            }
+        };
     }, [getRandomWord]);
 
     // Actions
@@ -79,16 +123,11 @@ const VocabularyPopup = (): JSX.Element | null => {
         // Animation Delay
         setTimeout(async () => {
             if (type === 'easy') {
-                if (isGuest) {
-                    setGuestLimitProps({ isOpen: true, message: "Login to save progress." });
-                    setLastAction(null);
-                    return;
-                }
                 await markAsLearned(word.id);
                 setSessionCount(p => p + 1);
             }
 
-            if (type === 'hard' && !isGuest) {
+            if (type === 'hard') {
                 const currentStats = {
                     interval: word.interval || 0,
                     repetition: word.repetition || 0,
@@ -153,12 +192,10 @@ const VocabularyPopup = (): JSX.Element | null => {
                             'rgba(255, 255, 255, 0.08)'
                 }}
                 exit={{ opacity: 0, x: 20 }}
-                onHoverStart={() => setIsHovered(true)}
-                onHoverEnd={() => setIsHovered(false)}
                 // Apply drag region here. "pointer-events-auto" enables clicking.
                 // We use inline style for app-region to ensure Electron picks it up.
                 style={{ WebkitAppRegion: 'drag' } as any}
-                className="pointer-events-auto w-80 bg-[#0c0c0e]/95 backdrop-blur-3xl border rounded-2xl shadow-2xl overflow-hidden group select-none relative"
+                className="pointer-events-auto w-80 bg-[#0c0c0e]/95 backdrop-blur-3xl border rounded-2xl shadow-2xl overflow-visible group select-none relative"
             >
                 {/* top border highlight for 3D feel */}
                 <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
@@ -177,7 +214,7 @@ const VocabularyPopup = (): JSX.Element | null => {
                         </div>
                         <div className="flex items-center gap-2 no-drag-region">
                             {/* Buttons must be no-drag to be clickable */}
-                            <button onClick={handleClose} className="hover:text-white text-white/20 transition-colors">
+                            <button onClick={handleClose} style={{ cursor: 'pointer' }} className="hover:text-white text-white/20 transition-colors">
                                 <X size={14} />
                             </button>
                         </div>
@@ -235,19 +272,29 @@ const VocabularyPopup = (): JSX.Element | null => {
 
                     {/* FOOTER: Interaction Zone */}
                     <div className="flex items-center gap-2 mt-1 no-drag-region">
-                        <button
-                            onClick={playAudio}
-                            className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 text-white/50 hover:text-white transition-all active:scale-95"
-                            title="Play Audio"
-                        >
-                            <Volume2 size={14} />
-                        </button>
+                        {/* Audio button with custom tooltip (above card, avoids overflow-hidden clipping) */}
+                        <div className="relative group/audio">
+                            <button
+                                onClick={playAudio}
+                                style={{ cursor: 'pointer' }}
+                                className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 text-white/50 hover:text-white transition-all active:scale-95 cursor-pointer"
+                            >
+                                <Volume2 size={14} />
+                            </button>
+                            {/* Custom tooltip — renders ABOVE the button, outside overflow boundary */}
+                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 pointer-events-none">
+                                <div className="opacity-0 group-hover/audio:opacity-100 transition-opacity duration-150 bg-black/90 backdrop-blur text-[10px] text-white/80 px-2 py-1 rounded-md border border-white/10 whitespace-nowrap shadow-xl">
+                                    🔊 Sesi Oynat
+                                </div>
+                            </div>
+                        </div>
 
                         <div className="h-4 w-px bg-white/5 mx-1"></div>
 
                         <button
                             onClick={() => handleAction('hard')}
-                            className="flex-1 h-9 rounded-lg bg-red-500/10 hover:bg-red-500/20 border border-red-500/10 hover:border-red-500/30 flex items-center justify-between px-3 transition-all active:scale-95 group/btn"
+                            style={{ cursor: 'pointer' }}
+                            className="flex-1 h-9 rounded-lg bg-red-500/10 hover:bg-red-500/20 border border-red-500/10 hover:border-red-500/30 flex items-center justify-between px-3 transition-all active:scale-95 group/btn cursor-pointer"
                         >
                             <span className="text-[10px] font-bold text-red-300/70 uppercase">Hard</span>
                             <span className="text-[9px] font-mono text-red-300/30 group-hover/btn:text-red-300 opacity-0 group-hover:opacity-100 transition-opacity">H</span>
@@ -255,7 +302,8 @@ const VocabularyPopup = (): JSX.Element | null => {
 
                         <button
                             onClick={() => handleAction('easy')}
-                            className="flex-1 h-9 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/10 hover:border-emerald-500/30 flex items-center justify-between px-3 transition-all active:scale-95 group/btn"
+                            style={{ cursor: 'pointer' }}
+                            className="flex-1 h-9 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/10 hover:border-emerald-500/30 flex items-center justify-between px-3 transition-all active:scale-95 group/btn cursor-pointer"
                         >
                             <span className="text-[10px] font-bold text-emerald-300/70 uppercase">Easy</span>
                             <span className="text-[9px] font-mono text-emerald-300/30 group-hover/btn:text-emerald-300 opacity-0 group-hover:opacity-100 transition-opacity">E</span>
@@ -270,27 +318,6 @@ const VocabularyPopup = (): JSX.Element | null => {
                         </div>
                     </div>
                 </div>
-
-                {/* GUEST WARNING */}
-                <AnimatePresence>
-                    {guestLimitProps.isOpen && (
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            className="absolute inset-0 bg-[#0c0c0e]/95 flex flex-col items-center justify-center p-6 text-center z-50 no-drag-region"
-                        >
-                            <Lock size={24} className="text-amber-500 mb-3" />
-                            <p className="text-xs text-gray-300 mb-4 leading-relaxed">{guestLimitProps.message}</p>
-                            <button
-                                onClick={() => setGuestLimitProps({ ...guestLimitProps, isOpen: false })}
-                                className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-xs font-bold text-white transition-colors"
-                            >
-                                Got it
-                            </button>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
             </motion.div>
         </div>
     );

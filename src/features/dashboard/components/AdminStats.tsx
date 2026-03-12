@@ -1,49 +1,57 @@
-import { Database, Users, Server, Shield } from 'lucide-react';
+import { BookOpen, CheckCircle, Clock } from 'lucide-react';
 import { useAppStore } from '../../../store';
 
 const AdminStats = () => {
-    const isAdmin = useAppStore(state => state.isAdmin);
     const words = useAppStore(state => state.words);
+    const settings = useAppStore(state => state.settings);
 
-    if (!isAdmin) {
-        // Show something for regular users? Maybe total learned words.
-        const learned = words.filter(w => w.is_learned).length;
-        return (
-            <div className="w-full h-full flex flex-col">
-                <div className="flex items-center gap-2 mb-6">
-                    <Shield size={16} className="text-blue-500" />
-                    <h3 className="font-bold text-slate-400 text-xs uppercase tracking-wider">Your Progress</h3>
-                </div>
-                <Metric
-                    label="Learned Words"
-                    value={learned.toString()}
-                    icon={<Database size={16} />}
-                    status="green"
-                />
-            </div>
-        );
-    }
+    const learned = words.filter(w => w.is_learned).length;
+    const inProgress = words.filter(w => !w.is_learned && w.repetition && w.repetition > 0).length;
+    const remaining = words.filter(w => !w.is_learned).length;
 
     return (
-        <div className="w-full h-full flex flex-col">
-            <div className="flex items-center gap-2 mb-6">
-                <div className="p-1.5 bg-indigo-100 rounded-lg">
-                    <Shield size={16} className="text-indigo-600" />
+            <div className="w-full h-full flex flex-col">
+                <div className="flex items-center gap-2 mb-6">
+                    <div className="p-1.5 bg-emerald-100 rounded-lg">
+                        <BookOpen size={16} className="text-emerald-600" />
+                    </div>
+                    <h3 className="font-bold text-slate-700 text-xs uppercase tracking-wider">Your Progress</h3>
                 </div>
-                <h3 className="font-bold text-slate-700 text-xs uppercase tracking-wider">System Overview</h3>
-            </div>
 
-            <div className="space-y-4">
-                <Metric
-                    label="Total Words"
-                    value={words.length.toString()}
-                    icon={<Database size={18} />}
-                    gradient="from-cyan-500 to-blue-500"
-                />
-                {/* Add more system stats if available later */}
+                <div className="space-y-4">
+                    <Metric
+                        label="Learned"
+                        value={learned.toString()}
+                        icon={<CheckCircle size={18} />}
+                        gradient="from-emerald-500 to-teal-500"
+                    />
+                    <Metric
+                        label="In Progress"
+                        value={inProgress.toString()}
+                        icon={<Clock size={18} />}
+                        gradient="from-amber-500 to-orange-500"
+                    />
+                    <Metric
+                        label="Remaining"
+                        value={remaining.toString()}
+                        icon={<BookOpen size={18} />}
+                        gradient="from-slate-400 to-slate-500"
+                    />
+                </div>
+
+                <div className="mt-auto pt-4 border-t border-slate-100">
+                    <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+                        Next popup in ~{settings.frequency} sec
+                    </p>
+                    <div className="w-full bg-slate-100 rounded-full h-1 mt-1">
+                        <div
+                            className="h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full transition-all duration-700"
+                            style={{ width: `${Math.min((learned / (words.length || 1)) * 100, 100)}%` }}
+                        />
+                    </div>
+                </div>
             </div>
-        </div>
-    );
+        );
 };
 
 const Metric = ({ label, value, icon, gradient = "from-slate-500 to-slate-600" }: any) => (

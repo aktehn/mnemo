@@ -5,7 +5,7 @@
  */
 
 import { useState, useEffect } from 'react';
-import { Search, Trash2, Cloud, RefreshCw, Check, X, BookOpen, GraduationCap, RotateCcw } from 'lucide-react';
+import { Search, Trash2, Cloud, RefreshCw, Check, BookOpen, GraduationCap, RotateCcw } from 'lucide-react';
 import { useAppStore } from '../../../store';
 import WordForm from '../WordForm';
 import toast from 'react-hot-toast';
@@ -18,8 +18,6 @@ const WordsView = () => {
     const deleteWord = useAppStore(state => state.actions.deleteWord);
     const markAsLearned = useAppStore(state => state.actions.markAsLearned);
     const unlearnWord = useAppStore(state => state.actions.unlearnWord);
-    const isAdmin = useAppStore(state => state.isAdmin);
-    const isGuest = useAppStore(state => state.isGuest);
 
     const [search, setSearch] = useState("");
     const [view, setView] = useState('list'); // 'list' or 'add'
@@ -38,10 +36,6 @@ const WordsView = () => {
     };
 
     const handleMarkAsLearned = async (word: any) => {
-        if (isGuest) {
-            toast.success('Kelime öğrendiklerin arasına eklendi! (Misafir Modu: Kayıtlı değil)', { icon: '🎓', style: { borderRadius: '12px', background: '#333', color: '#fff' } });
-        }
-
         const result = await markAsLearned(word.id);
         if (result) {
             toast.success(`"${word.term}" öğrenilenlere eklendi!`, { icon: '🎉', position: 'bottom-right' });
@@ -51,17 +45,6 @@ const WordsView = () => {
     };
 
     const handleUnlearn = async (word: any) => {
-        if (isGuest) {
-            toast('İlerlemeni kaydetmek için giriş yapmalısın.', {
-                icon: '🔒',
-                style: {
-                    borderRadius: '12px',
-                    background: '#1e293b',
-                    color: '#fff',
-                    border: '1px solid #334155'
-                },
-            });
-        }
         await unlearnWord(word.id);
     };
 
@@ -96,15 +79,13 @@ const WordsView = () => {
                         <p className="text-slate-500 text-sm font-medium mt-1">Manage and track your learning progress.</p>
                     </div>
 
-                    {isAdmin && (
-                        <button
-                            onClick={() => setView('add')}
-                            className="px-5 py-2.5 bg-slate-900 text-white rounded-xl text-sm font-bold hover:bg-slate-800 hover:scale-105 active:scale-95 transition-all shadow-lg shadow-slate-200 flex items-center gap-2 group"
-                        >
-                            <span className="group-hover:rotate-90 transition-transform duration-300 transform origin-center text-lg">+</span>
-                            <span>Add Word</span>
-                        </button>
-                    )}
+                    <button
+                        onClick={() => setView('add')}
+                        className="px-5 py-2.5 bg-slate-900 text-white rounded-xl text-sm font-bold hover:bg-slate-800 hover:scale-105 active:scale-95 transition-all shadow-lg shadow-slate-200 flex items-center gap-2 group"
+                    >
+                        <span className="group-hover:rotate-90 transition-transform duration-300 transform origin-center text-lg">+</span>
+                        <span>Add Word</span>
+                    </button>
                 </div>
 
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4 border-b border-slate-100 pb-0">
@@ -214,37 +195,35 @@ const WordsView = () => {
                                     </div>
                                 </td>
                                 <td className="py-4 px-6 align-top text-right pr-8">
-                                    {isAdmin ? (
+                                    <div className="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
                                         <button
-                                            onClick={() => handleDelete(word.id)}
-                                            className="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-xl transition-all opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 duration-200"
+                                            onClick={() => handleDelete(word.id as number)}
+                                            className="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-xl transition-all"
                                             title="Delete Word"
                                         >
                                             <Trash2 size={18} />
                                         </button>
-                                    ) : (
-                                        <div className="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
-                                            {word.is_learned ? (
-                                                <button
-                                                    onClick={() => handleUnlearn(word)}
-                                                    className="flex items-center gap-2 px-3 py-1.5 text-slate-500 hover:text-amber-600 hover:bg-amber-50 rounded-lg transition-colors border border-transparent hover:border-amber-200 text-xs font-bold bg-white shadow-sm hover:shadow"
-                                                    title="Re-add to learning queue"
-                                                >
-                                                    <RotateCcw size={14} />
-                                                    <span>Re-learn</span>
-                                                </button>
-                                            ) : (
-                                                <button
-                                                    onClick={() => handleMarkAsLearned(word)}
-                                                    className="flex items-center gap-2 px-3 py-1.5 text-white bg-slate-900 hover:bg-emerald-600 rounded-lg transition-all text-xs font-bold shadow-md hover:shadow-lg hover:shadow-emerald-200 transform hover:-translate-y-0.5 active:translate-y-0"
-                                                    title="Mark as Mastered"
-                                                >
-                                                    <Check size={14} />
-                                                    <span>Master IT</span>
-                                                </button>
-                                            )}
-                                        </div>
-                                    )}
+
+                                        {word.is_learned ? (
+                                            <button
+                                                onClick={() => handleUnlearn(word)}
+                                                className="flex items-center gap-2 px-3 py-1.5 text-slate-500 hover:text-amber-600 hover:bg-amber-50 rounded-lg transition-colors border border-transparent hover:border-amber-200 text-xs font-bold bg-white shadow-sm hover:shadow"
+                                                title="Re-add to learning queue"
+                                            >
+                                                <RotateCcw size={14} />
+                                                <span>Re-learn</span>
+                                            </button>
+                                        ) : (
+                                            <button
+                                                onClick={() => handleMarkAsLearned(word)}
+                                                className="flex items-center gap-2 px-3 py-1.5 text-white bg-slate-900 hover:bg-emerald-600 rounded-lg transition-all text-xs font-bold shadow-md hover:shadow-lg hover:shadow-emerald-200 transform hover:-translate-y-0.5 active:translate-y-0"
+                                                title="Mark as Mastered"
+                                            >
+                                                <Check size={14} />
+                                                <span>Master IT</span>
+                                            </button>
+                                        )}
+                                    </div>
                                 </td>
                             </tr>
                         ))}

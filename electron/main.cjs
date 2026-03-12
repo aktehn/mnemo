@@ -11,10 +11,16 @@ const { app, BrowserWindow, ipcMain, screen, Tray, Menu, nativeImage, globalShor
 const path = require('path');
 const fs = require('fs-extra');
 
+// Suppress Chromium DevTools noise (Autofill, disk cache warnings)
+app.commandLine.appendSwitch('disable-features', 'Autofill');
+app.commandLine.appendSwitch('disable-background-networking');
+app.commandLine.appendSwitch('log-level', '3'); // Only fatal errors
+
 // Application state
 let adminWindow;
 let popupWindow;
 let tray;
+let popupTimeoutRef = null; // Tracks the active popup scheduler so we can cancel & restart it
 
 // Environment detection
 const isDev = process.env.NODE_ENV === 'development';
@@ -27,7 +33,6 @@ const POPUP_CONFIG = {
     SCREEN_PADDING: 20,
 };
 
-const POPUP_INTERVAL_MS = 10000; // 10 seconds for testing (adjust in production)
 
 /**
  * Creates the admin window for vocabulary management
@@ -102,6 +107,10 @@ function createPopupWindow() {
         console.log('Popup window loaded, showing automatically...');
         popupWindow.show();
         popupWindow.webContents.send('refresh-word');
+        // Push the authoritative settings to popup immediately on load.
+        // This bypasses localStorage isolation between BrowserWindows.
+        popupWindow.webContents.send('settings-data', userSettings);
+        console.log(`📤 Pushed settings to popup on load: frequency=${userSettings.frequency}sec`);
     });
 
     // Prevent closing, just hide
@@ -165,8 +174,8 @@ function createTray() {
 let userSettings = {
     workHoursStart: "09:00",
     workHoursEnd: "18:00",
-    focusModeEnabled: true,
-    frequency: 15 // minutes
+    focusModeEnabled: false, // Default OFF — won't block popups accidentally
+    frequency: 5 // SECONDS (matches frontend default)
 };
 
 /**
@@ -193,6 +202,44 @@ function checkFocusMode() {
 }
 
 /**
+ * Schedules popup rotation using setInterval (more reliable than setTimeout chains).
+ * Lives in global scope — called from app.whenReady and from update-settings IPC.
+ * Cancels any existing interval before starting a new one.
+ */
+function scheduleNextPopup() {
+    // Cancel any existing interval
+    if (popupTimeoutRef) {
+        clearInterval(popupTimeoutRef);
+        popupTimeoutRef = null;
+    }
+
+    // Always use the user's frequency setting — no dev/prod branching.
+    // SECONDS BASED. This ensures popup hits every 5-10 seconds.
+    const frequencyMs = (userSettings.frequency || 5) * 1000;
+
+    console.log(`🕐 Popup interval started: every ${Math.round(frequencyMs / 1000)}s (freq=${userSettings.frequency}sec)`);
+
+    popupTimeoutRef = setInterval(() => {
+        if (checkFocusMode()) {
+            if (popupWindow) {
+                console.log('⏰ Rotating word (scheduled)...');
+                popupWindow.webContents.send('refresh-word');
+                // Only show the popup if it was hidden — don't interrupt if visible
+                if (!popupWindow.isVisible()) {
+                    popupWindow.show();
+                }
+            }
+        } else {
+            console.log('zzz Focus Mode: Outside work hours. Popup suppressed.');
+            if (popupWindow && popupWindow.isVisible()) {
+                popupWindow.hide();
+            }
+        }
+    }, frequencyMs);
+}
+
+
+/**
  * Application initialization
  * Creates windows, tray, and starts popup interval timer
  */
@@ -207,38 +254,9 @@ app.whenReady().then(() => {
             console.log('⌨️ Global Shortcut Triggered');
             popupWindow.show();
             popupWindow.webContents.send('refresh-word');
-            // Optionally focus:
             popupWindow.focus();
         }
     });
-
-    // Dynamic scheduling for popups
-    const scheduleNextPopup = () => {
-        const frequencyMs = (userSettings.frequency || 15) * 60 * 1000;
-
-        // For testing purposes, if frequency is very short (e.g. 5 min), 
-        // we might want a faster debug cycle. 
-        // But let's stick to user settings. 
-        // NOTE: For development debugging, you might want to force a shorter time.
-        // const delay = isDev ? 10000 : frequencyMs; 
-        const delay = isDev ? 10000 : frequencyMs; // Keep 10s for dev testing as requested before
-
-        setTimeout(() => {
-            if (checkFocusMode()) {
-                if (popupWindow) {
-                    console.log('⏰ Triggering scheduled popup...');
-                    popupWindow.show();
-                    popupWindow.webContents.send('refresh-word');
-                }
-            } else {
-                console.log('zzz Focus Mode: Outside work hours. Popup suppressed.');
-                if (popupWindow && popupWindow.isVisible()) {
-                    popupWindow.hide();
-                }
-            }
-            scheduleNextPopup();
-        }, delay);
-    };
 
     scheduleNextPopup();
 });
@@ -247,8 +265,11 @@ app.whenReady().then(() => {
  * Quit when all windows are closed (except on macOS)
  */
 app.on('will-quit', () => {
-    // Unregister all shortcuts.
     globalShortcut.unregisterAll();
+    if (popupTimeoutRef) {
+        clearInterval(popupTimeoutRef);
+        popupTimeoutRef = null;
+    }
 });
 
 /**
@@ -362,6 +383,18 @@ ipcMain.on('hide-popup', () => {
 
 ipcMain.on('update-settings', (event, newSettings) => {
     userSettings = { ...userSettings, ...newSettings };
+
+    // If frequency changed, restart the popup timer immediately with new interval
+    if (newSettings.frequency !== undefined) {
+        console.log(`⚙️ Frequency updated to ${newSettings.frequency}sec — restarting scheduler.`);
+        scheduleNextPopup();
+    }
+
+    // Notify popup window of new settings so its renderer-side timer resets too
+    if (popupWindow && !popupWindow.isDestroyed()) {
+        popupWindow.webContents.send('settings-data', userSettings);
+        console.log(`📤 Pushed updated settings to popup: frequency=${userSettings.frequency}sec`);
+    }
 
     // Dynamically reposition popup if position setting changed
     if (newSettings.popupPosition && popupWindow) {

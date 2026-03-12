@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Settings, Database, Monitor, Shield, ChevronDown, CheckCircle, RefreshCw, LayoutTemplate } from 'lucide-react';
+import { Settings, Database, Monitor, Shield, ChevronDown, CheckCircle, LayoutTemplate } from 'lucide-react';
 import { useAppStore } from '../../store';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -70,6 +70,34 @@ const GeneralSettings = () => {
                 <p className="text-slate-500 text-sm">Manage your daily workflow settings.</p>
             </div>
 
+            {/* Popup Frequency */}
+            <div className="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm">
+                <div className="flex items-center justify-between mb-4">
+                    <div>
+                        <h3 className="font-bold text-slate-900">Popup Frequency</h3>
+                        <p className="text-xs text-slate-500 mt-1">How often vocabulary cards appear on screen.</p>
+                    </div>
+                    <div className="text-right">
+                        <span className="text-2xl font-black text-blue-600">{settings.frequency}</span>
+                        <span className="text-xs text-slate-400 ml-1">sec</span>
+                    </div>
+                </div>
+                <input
+                    type="range"
+                    min={3}
+                    max={60}
+                    step={1}
+                    value={settings.frequency}
+                    onChange={(e) => updateSettings({ frequency: Number(e.target.value) })}
+                    className="w-full accent-blue-600 cursor-pointer"
+                />
+                <div className="flex justify-between text-[10px] text-slate-400 font-bold mt-1">
+                    <span>3 sec</span>
+                    <span>30 sec</span>
+                    <span>60 sec</span>
+                </div>
+            </div>
+
             {/* Focus Mode */}
             <div className="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm">
                 <div className="flex items-center justify-between mb-4">
@@ -97,7 +125,6 @@ const GeneralSettings = () => {
 };
 
 const DataSettings = () => {
-    const syncStatus = useAppStore(state => state.syncStatus);
     const settings = useAppStore(state => state.settings);
     const updateSettings = useAppStore(state => state.actions.updateSettings);
 
@@ -105,7 +132,7 @@ const DataSettings = () => {
         <div className="space-y-8">
             <div>
                 <h2 className="text-xl font-black text-slate-900 mb-1">Dictionary & Data</h2>
-                <p className="text-slate-500 text-sm">Configure data sources and cloud sync.</p>
+                <p className="text-slate-500 text-sm">Configure data sources (Local).</p>
             </div>
 
             {/* Dictionary Source */}
@@ -118,34 +145,18 @@ const DataSettings = () => {
                         className="w-full appearance-none bg-white border border-slate-200 text-slate-900 text-sm font-bold rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
                     >
                         <option value="dummy">Dummy Data (Offline)</option>
-                        <option value="api">API Data (Live)</option>
                     </select>
                     <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" size={16} />
                 </div>
                 <p className="text-[10px] text-slate-400 mt-2 font-medium">
-                    {settings.dataSource === 'dummy' ? 'Using local JSON file (a2_vocab.json).' : 'Using Supabase & External APIs.'}
+                    Using local JSON file (a2_vocab.json) and Electron store.
                 </p>
-            </div>
-
-            {/* Sync Status Live Indicator */}
-            <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm flex items-center justify-between">
-                <div>
-                    <h3 className="font-bold text-slate-900">Cloud Sync</h3>
-                    <div className="flex items-center gap-2 mt-1">
-                        <div className={`w-2 h-2 rounded-full ${syncStatus.is_syncing ? 'bg-blue-500 animate-pulse' : 'bg-green-500'}`}></div>
-                        <p className="text-xs text-slate-500">
-                            {syncStatus.is_syncing ? 'Syncing...' : `Last synced: ${syncStatus.last_sync ? new Date(syncStatus.last_sync).toLocaleTimeString() : 'Just now'}`}
-                        </p>
-                    </div>
-                </div>
-                <RefreshCw size={20} className={`text-slate-400 ${syncStatus.is_syncing ? 'animate-spin' : ''}`} />
             </div>
         </div>
     );
 };
 
 const AppearanceSettings = () => {
-    const screens = ['Top Left', 'Top Right', 'Bottom Left', 'Bottom Right', 'Center'];
     const settings = useAppStore(state => state.settings);
     const updateSettings = useAppStore(state => state.actions.updateSettings);
 
@@ -186,7 +197,6 @@ const AppearanceSettings = () => {
 };
 
 const DeveloperSettings = () => {
-    const forceSync = useAppStore(state => state.actions.forceSync);
     const clearLocalData = useAppStore(state => state.actions.clearLocalData);
     const updateSettings = useAppStore(state => state.actions.updateSettings);
 
@@ -210,19 +220,6 @@ const DeveloperSettings = () => {
                 <div className="space-y-4">
                     <div className="flex items-center justify-between p-3 bg-white rounded-xl border border-red-100">
                         <div>
-                            <p className="font-bold text-slate-800 text-sm">Force Cloud Sync</p>
-                            <p className="text-xs text-slate-400">Push local overrides to server.</p>
-                        </div>
-                        <button
-                            onClick={async () => { await forceSync(); alert('Done'); }}
-                            className="bg-red-100 text-red-600 px-3 py-1.5 rounded-lg text-xs font-bold hover:bg-red-200 transition-colors"
-                        >
-                            Sync Now
-                        </button>
-                    </div>
-
-                    <div className="flex items-center justify-between p-3 bg-white rounded-xl border border-red-100">
-                        <div>
                             <p className="font-bold text-slate-800 text-sm">Test Popup Window</p>
                             <p className="text-xs text-slate-400">Trigger immediate popup.</p>
                         </div>
@@ -244,7 +241,8 @@ const DeveloperSettings = () => {
                                 updateSettings({
                                     workHoursStart: '09:00',
                                     workHoursEnd: '18:00',
-                                    focusModeEnabled: true,
+                                    focusModeEnabled: false,
+                                    frequency: 5,
                                     dataSource: 'dummy',
                                     popupPosition: 'Bottom Right'
                                 });

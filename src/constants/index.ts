@@ -57,8 +57,8 @@ export const DEV_CONFIG = {
 export const DEFAULT_SETTINGS = {
     workHoursStart: '09:00',
     workHoursEnd: '18:00',
-    focusModeEnabled: true,
-    frequency: 15, // minutes
+    focusModeEnabled: false, // OFF by default — avoids suppressing popups outside work hours accidentally
+    frequency: 5, // minutes — 5 minute default for good UX
 } as const;
 
 /**
