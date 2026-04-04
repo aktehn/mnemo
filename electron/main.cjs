@@ -215,7 +215,7 @@ function scheduleNextPopup() {
 
     // Always use the user's frequency setting — no dev/prod branching.
     // SECONDS BASED. This ensures popup hits every 5-10 seconds.
-    const frequencyMs = (userSettings.frequency || 5) * 1000;
+    const frequencyMs = (userSettings.frequency || 10) * 1000;
 
     console.log(`🕐 Popup interval started: every ${Math.round(frequencyMs / 1000)}s (freq=${userSettings.frequency}sec)`);
 
