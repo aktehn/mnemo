@@ -6,7 +6,7 @@ const DEFAULT_SETTINGS: AppSettings = {
     workHoursStart: '09:00',
     workHoursEnd: '18:00',
     focusModeEnabled: false, // OFF by default
-    frequency: 5, // 5 seconds default
+    frequency: 10, // 10 seconds default
     dataSource: 'dummy',
     popupPosition: 'Bottom Right',
 };

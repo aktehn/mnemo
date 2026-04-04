@@ -242,7 +242,7 @@ const DeveloperSettings = () => {
                                     workHoursStart: '09:00',
                                     workHoursEnd: '18:00',
                                     focusModeEnabled: false,
-                                    frequency: 5,
+                                    frequency: 10,
                                     dataSource: 'dummy',
                                     popupPosition: 'Bottom Right'
                                 });

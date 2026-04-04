@@ -30,13 +30,6 @@ const VocabularyPopup = (): JSX.Element | null => {
     const updateWord = useAppStore(state => state.actions.updateWord);
     const markAsLearned = useAppStore(state => state.actions.markAsLearned);
 
-    // Frequency from Electron main (TRUE single source of truth).
-    // Electron main.cjs pushes 'settings-data' via IPC when popup loads AND when
-    // admin changes settings. This bypasses the localStorage isolation between
-    // BrowserWindows (each window has its own separate localStorage in Electron).
-    // Fallback to 5 min if IPC hasn't responded yet.
-    const [frequencyMin, setFrequencyMin] = useState(5);
-
     // Keep a ref to always access the LATEST words list in callbacks
     // This prevents stale closures when onRefreshWord fires from Electron IPC
     const wordsRef = useRef<VocabularyWord[]>(words);
@@ -45,19 +38,6 @@ const VocabularyPopup = (): JSX.Element | null => {
     // Initial Load
     useEffect(() => { loadWords(); }, [loadWords]);
 
-    // Listen for settings pushed from Electron main.cjs
-    // Main sends 'settings-data' on popup load AND whenever admin changes settings
-    useEffect(() => {
-        if (window.electron?.onSettingsUpdate) {
-            window.electron.onSettingsUpdate((settings: any) => {
-                const freq = settings?.frequency;
-                if (freq && freq > 0) {
-                    console.log(`[Popup] ✅ Received frequency from Electron main: ${freq} sec`);
-                    setFrequencyMin(freq);
-                }
-            });
-        }
-    }, []);
 
     // --- LOGIC ---
 
@@ -87,21 +67,8 @@ const VocabularyPopup = (): JSX.Element | null => {
         if (words.length > 0 && !word) getRandomWord();
     }, [words, word, getRandomWord]);
 
-    // -----------------------------------------------------------------------
-    // AUTO-REFRESH TIMER (Renderer-side, single source of truth)
-    // SECONDS BASED (frequencyMin is actually seconds now)
-    // -----------------------------------------------------------------------
-    useEffect(() => {
-        const intervalMs = frequencyMin * 1000;
-        console.log(`[Popup] Auto-refresh timer set: every ${frequencyMin} sec (${intervalMs}ms)`);
-        const timer = setInterval(() => {
-            console.log('[Popup] Auto-refresh: loading new word...');
-            getRandomWord();
-        }, intervalMs);
-        return () => clearInterval(timer);
-    }, [frequencyMin, getRandomWord]);
 
-    // Listen for Electron IPC refresh events (SECONDARY — triggers immediately on schedule tick)
+    // Listen for Electron IPC refresh events
     useEffect(() => {
         if (window.electron?.onRefreshWord) {
             window.electron.onRefreshWord(() => getRandomWord());
